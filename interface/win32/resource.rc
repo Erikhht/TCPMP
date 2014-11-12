@@ -1,0 +1,176 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Hungarian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HUN)
+#ifdef _WIN32
+LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Hungarian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FICON16             BITMAP  DISCARDABLE     "ficon16.bmp"
+IDB_TOOLBAR16           BITMAP  DISCARDABLE     "toolbar16.bmp"
+IDB_FICON32             BITMAP  DISCARDABLE     "ficon32.bmp"
+IDB_TOOLBAR32           BITMAP  DISCARDABLE     "toolbar32.bmp"
+IDB_PLAYLIST16          BITMAP  DISCARDABLE     "playlist16.bmp"
+IDB_PLAYLIST32          BITMAP  DISCARDABLE     "playlist32.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU11 MENU DISCARDABLE 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "A",                           WIN_A_A
+    END
+    POPUP " "
+    BEGIN
+        MENUITEM "B",                           WIN_B_B
+    END
+END
+
+IDR_MENU00 MENU DISCARDABLE 
+BEGIN
+    MENUITEM " ",                           WIN_A
+    MENUITEM " ",                           WIN_B
+END
+
+IDR_MENU10 MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "A",                           WIN_A_A
+    END
+    MENUITEM " ",                           WIN_B
+END
+
+IDR_MENU01 MENU DISCARDABLE 
+BEGIN
+    MENUITEM " ",                           WIN_A
+    POPUP " "
+    BEGIN
+        MENUITEM "B",                           WIN_B_B
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_MENU11 RCDATA DISCARDABLE 
+BEGIN
+    0x0075, 0x0002, 0xfffe, 0x9cbb, 0x0004, 0x0018, 0x9cc3, 0x0000, 0x0000, 
+    0xfffe, 0x9cbc, 0x0004, 0x0018, 0x9cc3, 0x0000, 0x0001
+END
+
+IDR_MENU00 RCDATA DISCARDABLE 
+BEGIN
+    0x0076, 0x0002, 0xfffe, 0x9cbb, 0x0004, 0x0010, 0x9cc3, 0x0000, 0xffff, 
+    0xfffe, 0x9cbc, 0x0004, 0x0010, 0x9cc3, 0x0000, 0xffff
+END
+
+IDR_MENU10 RCDATA DISCARDABLE 
+BEGIN
+    0x0077, 0x0002, 0xfffe, 0x9cbb, 0x0004, 0x0018, 0x9cc8, 0x0000, 0x0000, 
+    0xfffe, 0x9cbc, 0x0004, 0x0010, 0x9cc3, 0x0000, 0xffff
+END
+
+IDR_MENU01 RCDATA DISCARDABLE 
+BEGIN
+    0x0078, 0x0002, 0xfffe, 0x9cbb, 0x0004, 0x0010, 0x9cc3, 0x0000, 0xffff, 
+    0xfffe, 0x9cbc, 0x0004, 0x0018, 0x9cc3, 0x0000, 0x0001
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_EMPTY           " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_B               "B"
+    IDS_CAP_A               "A"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

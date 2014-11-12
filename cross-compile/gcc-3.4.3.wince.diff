@@ -1,0 +1,29 @@
+diff -urN orig-gcc-3.4.3/gcc/config/arm/pe.h gcc-3.4.3/gcc/config/arm/pe.h
+--- orig-gcc-3.4.3/gcc/config/arm/pe.h	2004-02-24 15:25:22.000000000 +0100
++++ gcc-3.4.3/gcc/config/arm/pe.h	2005-04-05 12:40:43.171875000 +0200
+@@ -84,11 +84,12 @@
+ #define WCHAR_TYPE_SIZE 16
+ 
+ /* r11 is fixed.  */
++/*
+ #undef  SUBTARGET_CONDITIONAL_REGISTER_USAGE
+ #define SUBTARGET_CONDITIONAL_REGISTER_USAGE \
+   fixed_regs [11] = 1; \
+   call_used_regs [11] = 1;
+-
++*/
+ 
+ /* Define this macro if in some cases global symbols from one translation
+    unit may not be bound to undefined symbols in another translation unit
+diff -urN orig-gcc-3.4.3/gcc/config/arm/wince-pe.h gcc-3.4.3/gcc/config/arm/wince-pe.h
+--- orig-gcc-3.4.3/gcc/config/arm/wince-pe.h	2004-02-24 15:25:22.000000000 +0100
++++ gcc-3.4.3/gcc/config/arm/wince-pe.h	2005-04-05 12:41:07.281250000 +0200
+@@ -22,7 +22,7 @@
+ /* Override arm/pe.h's default apcs26 support.  */
+ 
+ #undef  TARGET_DEFAULT
+-#define TARGET_DEFAULT	(ARM_FLAG_APCS_32 | ARM_FLAG_SOFT_FLOAT | TARGET_FLAG_NOP_FUN | ARM_FLAG_MMU_TRAPS)
++#define TARGET_DEFAULT	(ARM_FLAG_VFP | ARM_FLAG_APCS_32 | ARM_FLAG_SOFT_FLOAT | TARGET_FLAG_NOP_FUN | ARM_FLAG_MMU_TRAPS)
+ 
+ #undef  MULTILIB_DEFAULTS
+ #define MULTILIB_DEFAULTS \

@@ -1,0 +1,21 @@
+Which file to use? 
+
+First determine which type of processor do you have: ARM, MIPS, SH3
+If you don't know, it's most likely ARM.
+
+*.ARM.CAB 
+  PocketPC, PocketPC Phone Edition, HPC and other ARM handheld devices
+  (Intel XScale is an ARM cpu)
+
+*.ARM_SP.CAB
+  MS Smartphones (for SP2002,WM2003 SP,WM2003SE SP)
+
+*.ARM720.CAB
+  Same as ARM, just with different ARM CPU identifier for Sigmarion III
+  (this is NOT for Pocket Loox 720, please use TCPMP.ARM.CAB for that device)
+
+*.MIPS.CAB
+  Devices with MIPS CPU
+
+*.SH3.CAB
+  Devices with SH3 CPU

@@ -1,0 +1,34 @@
+To be done (highest priority first)
+-----------------------------------
+
+* TYPE D SAPs
+
+* TYPE S SAPs
+
+* MD1 and MD2 input formats (MPT with samples)
+
+* POKEY timer interrupts
+
+* display song name, author, date, ...
+
+* display additional information from STIL.txt
+
+* auto-detect song length in native formats
+
+* design and support TIME tag for SAPs
+
+* foobar2000, winamp, xmms: configuration
+
+* winamp, xmms: subsongs
+
+* input formats: Benjy Soundmonitor, Advanced Music System, Delta Composer,
+  Future Composer, Sound Tracker, Antic Music Processor, Black Music Composer,
+  Collen Music Creator, Music Studio, Soft Synth
+
+* seeking within the currently played song
+
+* convert 6502 routines to C for better performance
+
+* relocate native modules which collide with the player or hardware registers
+
+

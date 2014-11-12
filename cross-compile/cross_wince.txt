@@ -1,0 +1,57 @@
+This is minimal descripion how to build arm-wince-pe gcc cross compiler.
+Altough TCPMP doesn't use full gcc build, but it has a gcc supported
+compiling setting for more a optimized version. This means you only need
+to build a cross c compiler without any clib or linking functionality.
+
+1. preparations
+---------------
+
+in cygwin you need to have installed: 
+binutils, gcc, make, bison, byacc, flex, perl, w32api
+
+you should set c:/cygwin/bin infront of c:\windows in path
+(example to use cygwin's sort.exe)
+
+download latest gcc-core,gcc-g++,binutils and extract to /usr/src 
+(http://ftp.gnu.org/gnu/gcc/)
+(ftp://sources.redhat.com/pub/binutils/snapshots/)
+
+the versions i'am currently using:
+gcc-3.4.3
+binutils-2.16
+
+2. patching (IMPORTANT!)
+------------
+
+use the diff patch found in this directory
+
+cd /usr/src
+cat gcc-3.4.3.wince.diff | patch -p1
+
+3. compiling
+------------
+
+(replace x.xx x.x.x with actual binutils and gcc version)
+
+export PREFIX=/usr/arm-wince
+export TARGET=arm-wince-pe
+cd /usr/src
+mkdir build-binutils-wince build-gcc-wince
+
+cd /usr/src/build-binutils-wince
+../binutils-x.xx/configure --target=$TARGET --prefix=$PREFIX --disable-nls
+make all install
+
+cd /usr/src/build-gcc-wince
+export PATH=$PATH:$PREFIX/bin
+../gcc-x.x.x/configure --target=$TARGET --prefix=$PREFIX --disable-nls \
+    --enable-languages=c,c++ --without-headers --with-newlib
+make all-gcc install-gcc
+
+4. final adjustments
+--------------------
+
+add c:/cygwin/usr/arm-wince/bin to the path
+add to EVC in options/directories as well
+
+

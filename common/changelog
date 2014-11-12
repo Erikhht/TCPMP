@@ -1,0 +1,24 @@
+defines:
+MIPS32 (MIPS)
+FASTEST
+BUILDFIXED (WIN32,WINCE)
+DYNAMIC_CRC_TABLE (WIN32,WINCE)
+NO_ERRNO_H
+ZLIB_DLL (WIN32,WINCE)
+
+link with ole32.lib
+
+---------------------------------------------------
+libid3tag:
+frame.c renamed to frameid3.c
+global.h abort() -> exit(1)
+util.c zlib.h reference extended with path
+file.c not needed
+file.h not needed 
+version.c not needed
+version.h not needed
+debug.c not needed
+global.h id3_debug_malloc,... not needed: defined(DEBUG) -> defined(NEVER)
+layer3.c change calloc to malloc and memset (wince2.xx doesn't have calloc)
+frame.c static id3_byte_t const empty = 0;
+

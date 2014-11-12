@@ -1,0 +1,20 @@
+only decompression
+
+zlib 1.2.1
+http://www.gzip.org/zlib/
+
+defines:
+FASTEST
+BUILDFIXED (WIN32,WINCE)
+DYNAMIC_CRC_TABLE (WIN32,WINCE)
+NO_ERRNO_H
+ZLIB_DLL (WIN32,WINCE)
+
+all subdirectories deleted
+example.c not needed
+minigzip.c not needed
+deflate.c not needed
+compress.c not needed
+trees.c not needed
+gzio.c not needed
+infback.c not needed

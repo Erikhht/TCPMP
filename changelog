@@ -1,0 +1,462 @@
+version 0.72: 2006-02-22
++general equalizer (volume normalization optional)
++mpeg4 gmc and qpel asp features supported (except on mips/sh3)
++ffmpeg plugin: msvideo1/cinepak/tscc decoder included
++nsv container support (but no vp3/vp6 codec...)
++aiff uncompressed audio file support
++asap plugin (http://asap.sourceforge.net)
+-installer file naming changed
+-playlist shuffle mode fix
+-playlist and streaming redirection handling fix
+-ogg crash fix
+-(m)jpg rare decoder artifact fix (from 0.71)
+-DIV3 decoder artifact fix (from 0.70)
+-suppress cover art decoding error messages
+-id3 cover art parser fixes
+-buffering fix for very high bitrate movies
+-avi audio timing fix with incompatible files
+-asf parser fix
+-matroska seeking issue fix
+-PalmOS: pixel aspect option in preferences dialog
+-PalmOS: keylock window fix with LCD tweak modes
+-PalmOS: T|T,T2 48khz samplerate crash fix
+-WinCE: http listing of non-ascii filenames fix
+-WinCE: title scrolling if doesn't fit on screen
+-WinCE: WM5 (O2 Atom) memory mapping fix (with XScale driver)
+-WinCE: WMP10 WMA Voice decoder support
+-WinCE: http/mms streaming fix
+-WinCE: fix X50v WM5 black display after power on
+-WinCE: Treo700w keyboard backlight disabled in fullscreen
+-WinCE: telling "go online" to OS before http connection
+-WinCE: better handling of special hotkeys (record, menu, green, red phone buttons)
+-WinCE: microdrive mode memory handling fix
+-WinCE: ATI Imageon 3200 "Keep ATI driver active" option (maybe helps with crashes...)
+-WinCE: DirectDraw mode fixes (+disabled with some devices...)
+-Win32: DirectDraw clipping blit when overlay not available
+-Win32: DirectDraw overlay color space option in settings
+-Win32: administrator rights not needed anymore
+
+version 0.71: 2005-11-23
+-yuv blitting fix (intel 2700g, sonyhhe effected)
+-ogg icecast fix
+-avi opendl mode out of sync fix
+-large jpeg file support
+-song title updated with audio streaming fix
+-portrait pre-rotate disabled for coverart and podcasts
+-WinCE: http async mode (connection loss should not freeze the player)
+-WinCE: http avi playback fix
+-WinCE: http streaming emulate wmp10 identification (for ORB server)
+-WinCE: http site parsing and listing fixes
+-WinCE: file association IE auto-download flag only for playlists
+-WinCE: options/audio menu disappearing fix 
+-WinCE: raw framebuffer mode only for WM2003SE and later
+-PalmOS: screen blanking audio pause fix
+-PalmOS: pre-rotate portrait movies advanced option
+
+version 0.70: 2005-11-15
++Speex audio decoder support
++Epson graphics controller mode (Nexio S150/S151/S155/S160/XP30)
++Nexio XP40 DirectDraw overlay support
++mjpeg gray-scale support
++minimal jpeg, tiff, png image file support
++better support for enhanched podcasts (m4a with image slideshow)
++coverart support for music files
++ffmpeg library updated
++support for low resolution decoding (video quality)
++h263 elementary stream support
++PalmOS: advanced opitons dialog
++PalmOS: T|X LCD tweak options
++WinCE: Axis Network Camera MJPEG streaming support
++WinCE: RGB support for 2700G (example WMV playback on X50v)
++Win32: ascii console video mode :-)
++Win32: screen saver disabling during video playback
+-AAC removed from official binaries because of intellectual property considerations
+-Matroska codec info handling fix (h.264)
+-MatroskaParser library updated to version 1.47
+-ID3v2 fix in rawaudio
+-OGG tags as UTF-8 coding
+-some third party libraries replaced
+-avi files with ogg vorbis stream fix
+-h263 decoding fix + fallback to ffmpeg when format not supported
+-s263 (with 3gp) fix and support for h263 extended width/height
+-safe string handling (overflow protection)
+-mpeg4 decoder fixes
+-WinCE: codepage handling fixes
+-WinCE: ATI Imageon driver memory leak bug tweak
+-WinCE: backlight handling fix
+-WinCE: HTTP streaming fixes
+-WinCE: Raw Framebuffer usage with QVGA smartphones
+-WinCE: fix for MIPS VR41XX tweaks on WinCE 2.xx
+-WinCE: skip installing official gx.dll for new HPC devices with aygshell, but no GAPI support
+-WinCE: WMV9 advanced profile support via DMO interface (only with WMP10)
+-WinCE: file associations fix
+-WinCE: stereo mode (swapped,join,left,right) fix
+-PalmOS: m3u/pls playlist absolute path fix
+-PalmOS: stack overflow fix with some vorbis files
+-PalmOS: adpcm and uLaw audio codecs moved to tcpmp.prc install
+-PalmOS: audio buffer fix (music head not lost anymore after open)
+-PalmOS: Treo650/T5/LifeDrive program exit crash fix 
+-PalmOS: sysAppLaunchCmdOpenDB launch fix
+-PalmOS: external launching fixed (auto fullscreen playback)
+-PalmOS: T|T storage memory tweak fix
+-PalmOS: better low memory handling with mpeg1 files
+
+version 0.66: 2005-07-08
++plugins only loaded when needed
++amr nb/wb audio decoder
++mp3 xing/vbri vbr info reader
++"Landscape" by Mobile Stream support on Sony CLIE NX/NZ/TH
++Sony HHE plugin. THANKS to Mobile Stream for reverse engineering GE2D API!
++Zodiac plugin using ATI Imageon hardware video decoding and 2D acceleration
++AAC plugin memory and speed optimizing (and fixing 5.1 channel support)
++ffmpeg plugin (video only)
++icecast support
++asf http streaming
++ogg/ogm native player buffering (saves dynamic memory)
++tremor vorbis decoder with high-accuracy (default with WinCE)
++merged .mpg file support (timestamps restart inside media)
++Sony remote control keys support (Thanks to aplus)
++WinCE: WMP10 support (WMA/WMV) (except on devices with 2700G)
++PalmOS: shortcuts and preferences in main menu, key navigation (Thanks to Dan Walkowski)
++PalmOS: support for ROM storage (example with JackFlash)
++PalmOS: left/right direction buttons skip songs and seek when holding down for longer
++PalmOS: form savebehind disabled (saves dynamic memory)
++PalmOS: T|T T|2 memory tweak
++PalmOS: white borderless fullscreen and tripple buffering tweak on some devices
++PalmOS: battery manager override tweak
++PalmOS: WMMX optimized motion compensation code added
++PalmOS: sysAppLaunchCmdOpenDB & sysAppLaunchCmdCustomBase launchcodes for launching media files
++WinCE: 2700G and ATI Imageon hardware released in background
++WinCE: Musepack plugin added to main install (AC3 removed to separate plugin)
++'fill screen' zoom option
+-zero & duplicated chunk avi handling (fixes a/v sync with some tv records)
+-non interleaved avi handling
+-LifeDrive: action button fix and audio distrotion workaround for silent parts
+-QDA700: smartphone audio fix
+-Treo650: keyboard backlight light fix
+-PalmOS: frame dropping bugfix
+-Sony: jog keys fix
+-.mov and .asf file reader fixes
+-PalmOS: alarm suppressing fix
+-avi seeking fix
+-PalmOS: plugin relocation not making databases 'dirty'
+-PalmOS: low memory situation fixes
+-WinCE version working again
+-2700G: display flashing and freezing fix
+-WinCE: file associations fix (ringtone on Smartphones, downloading from web)
+-many minor bugfixes
+
+version 0.65: 2005-05-01
+!Windows version unusable
++Treo650 keyboard backlight turn off in fullscreen
++plugin architecture (modified gcc used for compiling)
++ac3 plugin for palmos
++musepack (mpc) plugin for palmos
+-changing to 'Unfiled' launcher catalog
+-mp4 reader bugfix
+-screen turn off bugfix
+-save last position fix with a/v offset
+-many minor bugfixes
+-fix d-pad direction following video
+
+version 0.64: 2005-04-21
+!Windows version unusable
++palmOne devices: turning off screen with audio files
++low memory usage mode with Tunsgten T|1 and T|2
++mp4 reader with lower memory usage and better seeking
++sector aligned file readering
++storage card insertion doesn't exit player
++timer display
++updated preference dialog
++using palmOne DisplayExtent library for direct screen access
+-linear volume
+-larger buffer for music playback
+-MCA2 audio problem workaround on Sony devices
+-matroska timing problem fix
+-Sony Clie VZ90 landscape fullscreen bugfix
+-fixing Makefile under linux
+-crash fixed with left/right button with no media loaded
+
+version 0.63: 2005-04-15
+!Windows version unusable
++Palm OS open dialog
++Palm OS preferences dialog
++Palm OS save settings
+-bugfixes
+
+version 0.62: 2005-04-12
+!Windows version unusable
+-bugfixes
+
+version 0.61: 2005-04-10
+!Windows version unusable
+-bugfixes
+
+version 0.60: 2005-04-09
+!Windows version unusable
++project renamed to "The Core Pocket Media Player"
++initial Palm OS version with lots of changes
+
+version 0.50b: 2005-03-19
++compaq aero1500 support :)
++asf marker support (chapters)
++screen aspect ratio options
++audio/aacp content-type added
++Dutch translation by PiLotCoptEr 
++matroska aac audio support
++nero mp4 chapter support
++HP Bluetooth Streo Headphone button support
+-more ati imageon options in settings
+-modified intel xscale video driver
+-mpeg4 b-frame bugfix
+-rounding bugfix with h.263
+-chapter hour bugfix
+-mulaw audio format detection bugfix
+-fixes for supporting grayscale devices
+-asf comment reader fix
+-wmv fix of width non multiply of four pixels
+-aspect ratio bugfix with less rotation tearing
+-dropped frame counter fix for hard frame dropping
+
+version 0.5: 2005-01-25
+
++czech translation by Triple T
++support for mqv extension
++higher priority for buffering advanced option
++adding files in subdirectories
+-bugfixes
+
+version 0.096: 2005-01-11
+
++optional software volume handling
++windows ce shortcut support
++intel xscale lcd controller (flipping and hardware vertical scale)
++default install supports aac le,he,ps profiles
++intel2700g plugin added to main install (open-sourced)
++adjustable r,g,b offsets in color dialog
++taskbar can be hidden
++better http and streaming support (with directory listing and seeking)
++plugin sources are includeded in main source repository
++template audio and video codec source added to repository
++non interleaved audio/video .mp4 support
++h.263 video codec
++quicktime ima adpcm audio codec
+-divx audio with windows media codec fix
+-wince 4.x window media codecs on non pocketpc fix
+-corrections with libfaad usage and mp4 file format
+-another mpeg4 header parser fix
+-avi framerate and opendml fixes
+-asf streaming fix 
+-uninstall restores file associations
+-user input thread priority changed (for buggy keyboard drivers)
+-better handling of low memory situation
+-perfering gapi over raw framebuffer with smartphones
+-better shoutcast support (meta data and aac support)
+-minor bugfixes (a lot)
+
+version 0.095: 2004-12-12
+
++playlist save
++aac audio codec added (libfaad)
++mp4 file format support
++opendml avi format support
++language JA updated by avi
++preliminary http support (will be rewritten later...)
+-asx playlist reader fixed
+-avi video timing bugfix
+-cpu clock meter fix
+-mpeg4 vol header parser bugfix
+-mpeg4 resync support
+-fixed some problems introduced in 0.094 (direct video, seeking, ati wmv slowdown)
+-added missing copyright notices
+
+version 0.094: 2004-11-29
+
++using GCC compiler for some codec files
++ac3 audio codec added (liba52)
++mjpeg and adpcm plugins included
++more accurate video timing (example better panning)
++language UA by Vadim
++some deep level video decoding programming interface changes (needs some testing)
++advanced option for benchmarking from current position
++ati imageon scaling lcd tearing elimination (if possible)
++adjustable zoom factor in settings
+-id3 tag support not only for mp3 (example with mpc plugin)
+-better support for nyditot virtual display
+-fixed rawframebuffer with real landscape mode video memory
+-fix for c500 with new rom
+-ati imageon clipping fix (mostly in portrait mode)
+-direction and action button can be catched in background too (not on smartphone)
+-negative a/v offset with audio only files fixed.
+-more avi format reading fix
+-minor mp3 codec timing fix
+-better internation mp3 tag support
+-fixed deleting more files from playlist at once
+-next/prev steps between chapters too
+
+version 0.093: 2004-10-20
+
++wireless mmx 50%,100%,200% blitting (preliminary)
++language HE by Yaniv Levinsky
++language PT by Claudio Neves
++wince 2.xx compability
++8bit palette display support
++not supported features by currently selected video driver are disabled in settings
++last modified date column added to opendialog (sortable)
++more ati imageon tweaks for better performance
+-seeking time display overflow fix
+-mouse cursor handling correction
+-hotkey bug introduced in 0.092 fix
+-better support for broken avi files
+
+version 0.092: 2004-09-28
+
++title bar
++title and timeslider bar can be turned on/off
++u-Law and a-Law audio codec support
++hotkeys can be optionally catched in the background
++smartphones: 'show only name' option in file open dialog
+-divx3/msmpeg decoder green-tint and slice fix
+-avi reader fix for bogus adpcm digital cameras
+-avi reader fix for partial movie files
+-ATI Imageon decoder crash fix
+-settings editbox initial cursor position fix
+-matroska with vorbis audio stream fix
+-backlight stay alive modification for smartphones
+-enter and direction keys are never captured (xBar fix)
+-minor playback interface fixes
+
+version 0.091: 2004-09-06
+
++MJPEG video codec support
++MPEG1 file format and video codec support
++hide some toolbar buttons if volume slider is too small
++BE-300 direct framebuffer support
++Matroska file format support (MatroskaPraser by Haali)
++MIPS support added with rich colors but without dither,smooth zoom
++SH3 support with 100% and 200% zoom, but it's slow...
++buffering code changed a lot (there might be some new bugs!)
++codepage support for language files
++support for Chinese Simplified (CHS) and Traditional (CHT)
++language CHT by HG
++language PL by azizi
++language JA by avi
++compressed language files
++equalizer preamp is a little more intelligent
++setup tries to benchmark video memory (default state of 'slow video memory')
++separate buffer size for microdrive mode
++MPEG4 video better compability (intra dc threshold, mpeg quantize matrices)
++zlib and mpegaudio file size decreased
++English benchmark log file with settings information
++new hotkey: toggle zoom fit orientation
++install size optimized
++new color lookup table method for non XScale CPUs
++some new speed settings in options menu
++even more optimized motion compensation
++Wireless MMX support (very preliminary)
++language files are packed into one tgz file
++MIPSII configurations added
++different settings for move backward and forward step
+-buggy AVI aligment support
+-Axim X30 landscape mode crash fix
+-GAPI is disabled if Raw Framebuffer is available
+-better video area aligment (for ATI Imageon too)
+-green/dirty border line fix (smooth zoom)
+-fixed: slow video memory optimalization was not used with fit screen
+-fixed: frame dropping issue when cpu usage was high
+-better ARM CPU feature detection (for MPx)
+-better cpu detection and bugfix for non xscale smartphones
+-plugin support adjusted
+-better video frame timing (example smoother panning)
+-LCD tearing is adjusted in some cases
+-playlist toolbar images in VGA res. fix
+-hopefully better microdrive mode
+-ATI aspect ratio bugfix
+-GDI scaled screen position bugfix
+-extra codec information support (avi,asf,ogg)
+-MPEG4 volume info as extra information
+-division by zero bug with large scaling
+-fixed seeking to begin of file with keys
+-GAPI init fix when player window is not foreground
+-combobox key navigation in settings dialog (pocketpc)
+
+version 0.04: 2004-06-16
+
++playlist support
++pls,m3u file format support
++aspect ratio support (manual)
++fit width and fit height options
++opendialog path combobox with history
++opendialog multiple selection
++chapter support
++stream selection
++SIP activation when needed
++stereo to mono option (with channel selection)
++language CA by djuanes
++language DE by Morkeleb 
++language ES by djuanes 
++language FR by Geared2003 
++language HU by KTamas 
++language IT by Atlantis
++language KO by Wesley Chung
++language RU by YDY
++language SV by Emil Jaregran 
++language TR by Ozkan
++language ZH by ZHK
+-tricky focus/fullscreen fix after double and triple clicks
+-buffering fix when frame dropping occur
+-mpeg4 error messages about unsupported features (gmc,interlace,qpel)
+-file resume after power-off fix
+-minor volume bar handling fix
+-input focus in settings dialog fix
+-smartphone backlight timeout fix (once more)
+-disabling keeplist fix
+-keeplist: silent mode (no error messages) at startup
+-focus problem with modal error messages fix
+-buffer flushing at end of file fix
+-ogm non vorbis audio stream bugfix
+
+version 0.03: 2004-06-03
+
++audio equalizer (with attenuate) (only pre-amp for vorbis)
++audio files can be played in background
++color saturation (not for ati imageon)
++language support (with auto detection)
++buffer underrun handling (pause with wait cursor)
++microdrive burstread start position in settings
++manual a/v sync offset option
++move back/forward step in settings
++support for saving benchmark results
++data rate benchmark (use disable video/audio for pure bandwidth benchmark)
++aygshell usage option (turn off by default for wince .net hpc devices)
+-changing to _LOW_ACCURACY_ in vorbis (same as in pocketmvp)
+-toolbar bitmap index bugfix
+-new settings controls
+-smartphone home screen timeout reset
+-ati imageon decoder/non decoder selection bugfix
+-move back/forward bugfix
+-no internal player volume (not saved/restored)
+-better backlight keepalive support (with disable option)
+-avi reader bugfixes (a lot)
+-keep file position after exit fix
+-more b-frames compability
+-more wn2003se compability
+-volumebar visibility fix (after close)
+-hotkey capture dialog can be closed with button
+-uninstall will remove registry settings
+-setup doesn't install gx.dll if OS already has one
+-ogg/ogm disabled streams memory "leak" fix
+-ati imageon version check (must be above 1.27.xxx)
+
+version 0.02: 2004-04-30
+
++ hardware key assigment
++ minimal volume slider
+- bugfix: GAPI landscape mode (ipaq h39xx)
+- bugfix: audio clicks (pcmsoft clipping)
+- microdrive option adjusted
+- many minor bugfixes
+
+version 0.01a: 2004-04-26
+
++ initial release

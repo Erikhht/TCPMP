@@ -1,0 +1,19 @@
+-D LC_ONLY_DECODER
+-D ARM
+-D NDEBUG 
+-D AAC_EXPORTS
+-D UNICODE
+-D _WIN32
+-D _WIN32_WCE
+-D __cdecl=
+-O3 
+-w
+-mno-apcs-frame
+-mtune=xscale 
+-march=armv4 
+-fomit-frame-pointer
+-fno-leading-underscore 
+-fsigned-char 
+-I. 
+-I/usr/include 
+-I/usr/include/w32api

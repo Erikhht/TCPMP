@@ -1,0 +1,509 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: common - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\TEMP\RSP171C.bat" with contents
+[
+@echo off
+copy "..\lang\lang_std.txt" "\tcpmp\release"
+]
+Creating command line "c:\TEMP\RSP171C.bat"
+Creating temporary file "c:\TEMP\RSP171D.bat" with contents
+[
+@echo off
+copy "..\lang\lang_en.txt" "\tcpmp\release"
+]
+Creating command line "c:\TEMP\RSP171D.bat"
+Creating temporary file "c:\TEMP\RSP171E.bat" with contents
+[
+@echo off
+nasm -f win32 -o ".\Release/x86.obj" .\cpu\x86.asm
+]
+Creating command line "c:\TEMP\RSP171E.bat"
+Creating temporary file "c:\TEMP\RSP171F.bat" with contents
+[
+@echo off
+nasm -f win32 -o ".\Release/mcomp_mmx.obj" .\softidct\mcomp_mmx.asm
+]
+Creating command line "c:\TEMP\RSP171F.bat"
+Creating temporary file "c:\TEMP\RSP1720.bat" with contents
+[
+@echo off
+nasm -f win32 -o ".\Release/mcomp4x4_mmx.obj" .\softidct\mcomp4x4_mmx.asm
+]
+Creating command line "c:\TEMP\RSP1720.bat"
+Creating temporary file "c:\TEMP\RSP1721.bat" with contents
+[
+@echo off
+nasm -f win32 -o ".\Release/idct_mmx.obj" .\softidct\idct_mmx.asm
+]
+Creating command line "c:\TEMP\RSP1721.bat"
+Creating temporary file "c:\TEMP\RSP1722.bat" with contents
+[
+@echo off
+nasm -f win32 -o ".\Release/blit_mmx.obj" .\blit\blit_mmx.asm
+]
+Creating command line "c:\TEMP\RSP1722.bat"
+Creating temporary file "c:\TEMP\RSP1723.tmp" with contents
+[
+/nologo /MD /GX /Zd /O2 /D "NDEBUG" /D "ZLIB_DLL" /D "FASTEST" /D "BUILDFIXED" /D "DYNAMIC_CRC_TABLE" /D "NO_ERRNO_H" /D "MMX" /D "_USRDLL" /D "COMMON_EXPORTS" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FAcs /Fa"Release/" /Fp"Release/common.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\tcpmp\common\advanced.c"
+"D:\tcpmp\common\audio.c"
+"D:\tcpmp\common\bitstrm.c"
+"D:\tcpmp\common\buffer.c"
+"D:\tcpmp\common\codec.c"
+"D:\tcpmp\common\color.c"
+"D:\tcpmp\common\context.c"
+"D:\tcpmp\common\equalizer.c"
+"D:\tcpmp\common\flow.c"
+"D:\tcpmp\common\format.c"
+"D:\tcpmp\common\format_base.c"
+"D:\tcpmp\common\format_subtitle.c"
+"D:\tcpmp\common\gzip.c"
+"D:\tcpmp\common\helper_base.c"
+"D:\tcpmp\common\helper_video.c"
+"D:\tcpmp\common\id3tag.c"
+"D:\tcpmp\common\idct.c"
+"D:\tcpmp\common\node.c"
+"D:\tcpmp\common\nulloutput.c"
+"D:\tcpmp\common\overlay.c"
+"D:\tcpmp\common\parser2.c"
+"D:\tcpmp\common\platform.c"
+"D:\tcpmp\common\player.c"
+"D:\tcpmp\common\playlist.c"
+"D:\tcpmp\common\probe.c"
+"D:\tcpmp\common\rawaudio.c"
+"D:\tcpmp\common\rawimage.c"
+"D:\tcpmp\common\str.c"
+"D:\tcpmp\common\streams.c"
+"D:\tcpmp\common\tchar.c"
+"D:\tcpmp\common\timer.c"
+"D:\tcpmp\common\tools.c"
+"D:\tcpmp\common\video.c"
+"D:\tcpmp\common\vlc.c"
+"D:\tcpmp\common\waveout.c"
+"D:\tcpmp\common\dyncode\dyncode.c"
+"D:\tcpmp\common\dyncode\dyncode_arm.c"
+"D:\tcpmp\common\dyncode\dyncode_mips.c"
+"D:\tcpmp\common\dyncode\dyncode_sh3.c"
+"D:\tcpmp\common\dyncode\dyncode_x86.c"
+"D:\tcpmp\common\win32\association_win32.c"
+"D:\tcpmp\common\win32\context_win32.c"
+"D:\tcpmp\common\win32\dmo_win32.c"
+"D:\tcpmp\common\win32\file_win32.c"
+"D:\tcpmp\common\win32\mem_win32.c"
+"D:\tcpmp\common\win32\multithread_win32.c"
+"D:\tcpmp\common\win32\node_win32.c"
+"D:\tcpmp\common\win32\platform_win32.c"
+"D:\tcpmp\common\win32\str_win32.c"
+"D:\tcpmp\common\win32\waveout_win32.c"
+"D:\tcpmp\common\palmos\association_palmos.c"
+"D:\tcpmp\common\palmos\context_palmos.c"
+"D:\tcpmp\common\palmos\dia.c"
+"D:\tcpmp\common\palmos\file_palmos.c"
+"D:\tcpmp\common\palmos\filedb_palmos.c"
+"D:\tcpmp\common\palmos\mem_palmos.c"
+"D:\tcpmp\common\palmos\native86.c"
+"D:\tcpmp\common\palmos\node_palmos.c"
+"D:\tcpmp\common\palmos\pace.c"
+"D:\tcpmp\common\palmos\platform_palmos.c"
+"D:\tcpmp\common\palmos\str_palmos.c"
+"D:\tcpmp\common\palmos\vfs_palmos.c"
+"D:\tcpmp\common\palmos\waveout_palmos.c"
+"D:\tcpmp\common\playlist\asx.c"
+"D:\tcpmp\common\playlist\m3u.c"
+"D:\tcpmp\common\playlist\pls.c"
+"D:\tcpmp\common\blit\blit_arm_fix.c"
+"D:\tcpmp\common\blit\blit_arm_gray.c"
+"D:\tcpmp\common\blit\blit_arm_half.c"
+"D:\tcpmp\common\blit\blit_arm_packed_yuv.c"
+"D:\tcpmp\common\blit\blit_arm_rgb16.c"
+"D:\tcpmp\common\blit\blit_arm_stretch.c"
+"D:\tcpmp\common\blit\blit_arm_yuv.c"
+"D:\tcpmp\common\blit\blit_mips_fix.c"
+"D:\tcpmp\common\blit\blit_mips_gray.c"
+"D:\tcpmp\common\blit\blit_sh3_fix.c"
+"D:\tcpmp\common\blit\blit_sh3_gray.c"
+"D:\tcpmp\common\blit\blit_soft.c"
+"D:\tcpmp\common\blit\blit_wmmx_fix.c"
+"D:\tcpmp\common\pcm\pcm_arm.c"
+"D:\tcpmp\common\pcm\pcm_mips.c"
+"D:\tcpmp\common\pcm\pcm_sh3.c"
+"D:\tcpmp\common\pcm\pcm_soft.c"
+"D:\tcpmp\common\softidct\block_c.c"
+"D:\tcpmp\common\softidct\block_half.c"
+"D:\tcpmp\common\softidct\block_mips64.c"
+"D:\tcpmp\common\softidct\block_mx1.c"
+"D:\tcpmp\common\softidct\block_wmmx.c"
+"D:\tcpmp\common\softidct\idct_c.c"
+"D:\tcpmp\common\softidct\idct_half.c"
+"D:\tcpmp\common\softidct\mcomp4x4_c.c"
+"D:\tcpmp\common\softidct\mcomp_c.c"
+"D:\tcpmp\common\softidct\mcomp_mips32.c"
+"D:\tcpmp\common\softidct\mcomp_mips64.c"
+"D:\tcpmp\common\softidct\softidct.c"
+"D:\tcpmp\common\cpu\cpu.c"
+"D:\tcpmp\common\cpu\mips.c"
+"D:\tcpmp\common\zlib\adler32.c"
+"D:\tcpmp\common\zlib\crc32.c"
+"D:\tcpmp\common\zlib\inffast.c"
+"D:\tcpmp\common\zlib\inflate.c"
+"D:\tcpmp\common\zlib\inftrees.c"
+"D:\tcpmp\common\zlib\uncompr.c"
+"D:\tcpmp\common\zlib\zutil.c"
+"D:\tcpmp\common\overlay\overlay_console.c"
+"D:\tcpmp\common\overlay\overlay_ddraw.c"
+"D:\tcpmp\common\overlay\overlay_ddrawce.c"
+"D:\tcpmp\common\overlay\overlay_direct.c"
+"D:\tcpmp\common\overlay\overlay_flytv.c"
+"D:\tcpmp\common\overlay\overlay_gapi.c"
+"D:\tcpmp\common\overlay\overlay_gdi.c"
+"D:\tcpmp\common\overlay\overlay_hires.c"
+"D:\tcpmp\common\overlay\overlay_raw.c"
+"D:\tcpmp\common\overlay\overlay_s1d13806.c"
+"D:\tcpmp\common\overlay\overlay_xscale.c"
+]
+Creating command line "cl.exe @c:\TEMP\RSP1723.tmp" 
+Performing Custom Build Step on ..\lang\lang_std.txt
+        1 file(s) copied.
+Performing Custom Build Step on ..\lang\lang_en.txt
+        1 file(s) copied.
+Performing Custom Build Step on .\cpu\x86.asm
+Performing Custom Build Step on .\softidct\mcomp_mmx.asm
+Performing Custom Build Step on .\softidct\mcomp4x4_mmx.asm
+Performing Custom Build Step on .\softidct\idct_mmx.asm
+Performing Custom Build Step on .\blit\blit_mmx.asm
+Creating temporary file "c:\TEMP\RSP1724.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib /nologo /dll /incremental:no /pdb:"Release/common.pdb" /map:"Release/common.map" /machine:I386 /out:"../release/common.dll" /implib:"Release/common.lib" 
+.\Release\advanced.obj
+.\Release\audio.obj
+.\Release\bitstrm.obj
+.\Release\buffer.obj
+.\Release\codec.obj
+.\Release\color.obj
+.\Release\context.obj
+.\Release\equalizer.obj
+.\Release\flow.obj
+.\Release\format.obj
+.\Release\format_base.obj
+.\Release\format_subtitle.obj
+.\Release\gzip.obj
+.\Release\helper_base.obj
+.\Release\helper_video.obj
+.\Release\id3tag.obj
+.\Release\idct.obj
+.\Release\node.obj
+.\Release\nulloutput.obj
+.\Release\overlay.obj
+.\Release\parser2.obj
+.\Release\platform.obj
+.\Release\player.obj
+.\Release\playlist.obj
+.\Release\probe.obj
+.\Release\rawaudio.obj
+.\Release\rawimage.obj
+.\Release\str.obj
+.\Release\streams.obj
+.\Release\tchar.obj
+.\Release\timer.obj
+.\Release\tools.obj
+.\Release\video.obj
+.\Release\vlc.obj
+.\Release\waveout.obj
+.\Release\dyncode.obj
+.\Release\dyncode_arm.obj
+.\Release\dyncode_mips.obj
+.\Release\dyncode_sh3.obj
+.\Release\dyncode_x86.obj
+.\Release\association_win32.obj
+.\Release\context_win32.obj
+.\Release\dmo_win32.obj
+.\Release\file_win32.obj
+.\Release\mem_win32.obj
+.\Release\multithread_win32.obj
+.\Release\node_win32.obj
+.\Release\platform_win32.obj
+.\Release\str_win32.obj
+.\Release\waveout_win32.obj
+.\Release\association_palmos.obj
+.\Release\context_palmos.obj
+.\Release\dia.obj
+.\Release\file_palmos.obj
+.\Release\filedb_palmos.obj
+.\Release\mem_palmos.obj
+.\Release\native86.obj
+.\Release\node_palmos.obj
+.\Release\pace.obj
+.\Release\platform_palmos.obj
+.\Release\str_palmos.obj
+.\Release\vfs_palmos.obj
+.\Release\waveout_palmos.obj
+.\Release\asx.obj
+.\Release\m3u.obj
+.\Release\pls.obj
+.\Release\blit_arm_fix.obj
+.\Release\blit_arm_gray.obj
+.\Release\blit_arm_half.obj
+.\Release\blit_arm_packed_yuv.obj
+.\Release\blit_arm_rgb16.obj
+.\Release\blit_arm_stretch.obj
+.\Release\blit_arm_yuv.obj
+.\Release\blit_mips_fix.obj
+.\Release\blit_mips_gray.obj
+.\Release\blit_sh3_fix.obj
+.\Release\blit_sh3_gray.obj
+.\Release\blit_soft.obj
+.\Release\blit_wmmx_fix.obj
+.\Release\pcm_arm.obj
+.\Release\pcm_mips.obj
+.\Release\pcm_sh3.obj
+.\Release\pcm_soft.obj
+.\Release\block_c.obj
+.\Release\block_half.obj
+.\Release\block_mips64.obj
+.\Release\block_mx1.obj
+.\Release\block_wmmx.obj
+.\Release\idct_c.obj
+.\Release\idct_half.obj
+.\Release\mcomp4x4_c.obj
+.\Release\mcomp_c.obj
+.\Release\mcomp_mips32.obj
+.\Release\mcomp_mips64.obj
+.\Release\softidct.obj
+.\Release\cpu.obj
+.\Release\mips.obj
+.\Release\adler32.obj
+.\Release\crc32.obj
+.\Release\inffast.obj
+.\Release\inflate.obj
+.\Release\inftrees.obj
+.\Release\uncompr.obj
+.\Release\zutil.obj
+.\Release\overlay_console.obj
+.\Release\overlay_ddraw.obj
+.\Release\overlay_ddrawce.obj
+.\Release\overlay_direct.obj
+.\Release\overlay_flytv.obj
+.\Release\overlay_gapi.obj
+.\Release\overlay_gdi.obj
+.\Release\overlay_hires.obj
+.\Release\overlay_raw.obj
+.\Release\overlay_s1d13806.obj
+.\Release\overlay_xscale.obj
+.\Release\blit_mmx.obj
+.\Release\idct_mmx.obj
+.\Release\mcomp4x4_mmx.obj
+.\Release\mcomp_mmx.obj
+.\Release\x86.obj
+]
+Creating command line "link.exe @c:\TEMP\RSP1724.tmp"
+<h3>Output Window</h3>
+Compiling...
+advanced.c
+audio.c
+bitstrm.c
+buffer.c
+codec.c
+color.c
+context.c
+equalizer.c
+flow.c
+format.c
+format_base.c
+format_subtitle.c
+gzip.c
+helper_base.c
+helper_video.c
+id3tag.c
+idct.c
+node.c
+nulloutput.c
+overlay.c
+parser2.c
+platform.c
+player.c
+playlist.c
+probe.c
+rawaudio.c
+rawimage.c
+str.c
+streams.c
+tchar.c
+timer.c
+tools.c
+video.c
+vlc.c
+waveout.c
+dyncode.c
+dyncode_arm.c
+dyncode_mips.c
+dyncode_sh3.c
+dyncode_x86.c
+association_win32.c
+context_win32.c
+dmo_win32.c
+file_win32.c
+mem_win32.c
+multithread_win32.c
+node_win32.c
+platform_win32.c
+str_win32.c
+waveout_win32.c
+association_palmos.c
+context_palmos.c
+dia.c
+file_palmos.c
+filedb_palmos.c
+mem_palmos.c
+native86.c
+node_palmos.c
+pace.c
+platform_palmos.c
+str_palmos.c
+vfs_palmos.c
+waveout_palmos.c
+asx.c
+m3u.c
+pls.c
+blit_arm_fix.c
+blit_arm_gray.c
+blit_arm_half.c
+blit_arm_packed_yuv.c
+blit_arm_rgb16.c
+blit_arm_stretch.c
+blit_arm_yuv.c
+blit_mips_fix.c
+blit_mips_gray.c
+blit_sh3_fix.c
+blit_sh3_gray.c
+blit_soft.c
+blit_wmmx_fix.c
+D:\tcpmp\common\blit\blit_soft.c(713) : warning C4700: local variable 'SrcPtr' used without having been initialized
+D:\tcpmp\common\blit\blit_soft.c(742) : warning C4700: local variable 'DstPtr' used without having been initialized
+pcm_arm.c
+pcm_mips.c
+pcm_sh3.c
+pcm_soft.c
+block_c.c
+block_half.c
+block_mips64.c
+block_mx1.c
+block_wmmx.c
+idct_c.c
+idct_half.c
+mcomp4x4_c.c
+mcomp_c.c
+mcomp_mips32.c
+mcomp_mips64.c
+softidct.c
+cpu.c
+mips.c
+adler32.c
+crc32.c
+inffast.c
+inflate.c
+inftrees.c
+uncompr.c
+zutil.c
+overlay_console.c
+overlay_ddraw.c
+overlay_ddrawce.c
+overlay_direct.c
+overlay_flytv.c
+overlay_gapi.c
+overlay_gdi.c
+overlay_hires.c
+overlay_raw.c
+overlay_s1d13806.c
+overlay_xscale.c
+Linking...
+   Creating library Release/common.lib and object Release/common.exp
+<h3>
+--------------------Configuration: vorbislq - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\TEMP\RSP1728.tmp" with contents
+[
+/nologo /MD /GX /Zd /O2 /D "NDEBUG" /D "_LOW_ACCURACY_" /D "_USRDLL" /D "VORBISLQ_EXPORTS" /D BYTE_ORDER=1 /D LITTLE_ENDIAN=1 /D BIG_ENDIAN=0 /D "WIN32" /D "_WINDOWS" /D "_MBCS" /Fp"Release/vorbislq.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\tcpmp\vorbislq\ogg.c"
+"D:\tcpmp\vorbislq\oggembedded.c"
+"D:\tcpmp\vorbislq\oggpacket.c"
+"D:\tcpmp\vorbislq\stdafx.c"
+"D:\tcpmp\vorbislq\vorbis.c"
+"D:\tcpmp\vorbislq\tremor\bitwise.c"
+"D:\tcpmp\vorbislq\tremor\block.c"
+"D:\tcpmp\vorbislq\tremor\codebook.c"
+"D:\tcpmp\vorbislq\tremor\floor0.c"
+"D:\tcpmp\vorbislq\tremor\floor1.c"
+"D:\tcpmp\vorbislq\tremor\framing.c"
+"D:\tcpmp\vorbislq\tremor\info.c"
+"D:\tcpmp\vorbislq\tremor\mapping0.c"
+"D:\tcpmp\vorbislq\tremor\mdctvorbis.c"
+"D:\tcpmp\vorbislq\tremor\registry.c"
+"D:\tcpmp\vorbislq\tremor\res012.c"
+"D:\tcpmp\vorbislq\tremor\sharedbook.c"
+"D:\tcpmp\vorbislq\tremor\synthesis.c"
+"D:\tcpmp\vorbislq\tremor\window.c"
+]
+Creating command line "cl.exe @c:\TEMP\RSP1728.tmp" 
+Creating temporary file "c:\TEMP\RSP1729.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/vorbislq.pdb" /map:"Release/vorbislq.map" /machine:I386 /out:"../release/vorbislq.plg" /implib:"Release/vorbislq.lib" 
+.\Release\ogg.obj
+.\Release\oggembedded.obj
+.\Release\oggpacket.obj
+.\Release\stdafx.obj
+.\Release\vorbis.obj
+.\Release\bitwise.obj
+.\Release\block.obj
+.\Release\codebook.obj
+.\Release\floor0.obj
+.\Release\floor1.obj
+.\Release\framing.obj
+.\Release\info.obj
+.\Release\mapping0.obj
+.\Release\mdctvorbis.obj
+.\Release\registry.obj
+.\Release\res012.obj
+.\Release\sharedbook.obj
+.\Release\synthesis.obj
+.\Release\window.obj
+\tcpmp\common\Release\common.lib
+]
+Creating command line "link.exe @c:\TEMP\RSP1729.tmp"
+<h3>Output Window</h3>
+Compiling...
+ogg.c
+oggembedded.c
+oggpacket.c
+stdafx.c
+vorbis.c
+bitwise.c
+block.c
+codebook.c
+floor0.c
+floor1.c
+framing.c
+info.c
+mapping0.c
+mdctvorbis.c
+registry.c
+res012.c
+sharedbook.c
+synthesis.c
+window.c
+Linking...
+   Creating library Release/vorbislq.lib and object Release/vorbislq.exp
+
+
+
+<h3>Results</h3>
+vorbislq.plg - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

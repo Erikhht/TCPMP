@@ -1,0 +1,7 @@
+FFmpeg mutimedia system
+http://ffmpeg.sourceforge.net/
+
+using snapshot 20/09/2005
+
+changes:
+lot of changes (marked with TCPMP and //Picard) to be able to compile under palmos and vs6

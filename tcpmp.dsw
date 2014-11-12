@@ -1,0 +1,428 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "aac"=.\aac\aac.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ac3"=.\ac3\ac3.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "amr"=.\amr\amr.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "asap"=.\asap\asap.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "camera"=.\camera\camera.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "common"=.\common\common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ffmpeg"=.\ffmpeg\ffmpeg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "flac"=.\flac\flac.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "interface"=.\interface\interface.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libmad"=.\libmad\libmad.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "make.palm"=.\make.palm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "matroska"=.\matroska\matroska.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mikmod"=.\mikmod\mikmod.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mpc"=.\mpc\mpc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mpeg1"=.\mpeg1\mpeg1.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "network"=.\network\network.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "player"=.\player\player.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lang_en
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lang_hu
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name adpcm
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name a52
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name avi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name camera
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name matroska
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name aac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mp3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name interface
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ac3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ffmpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name splitter
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vorbishq
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name network
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpeg1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name speex
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpeg4
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mp3_ffmpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libmad
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name asap
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name flac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wavpack
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "speex"=.\speex\speex.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "splitter"=.\splitter\splitter.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "template"=.\template\template.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vorbishq"=.\vorbishq\vorbishq.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vorbislq"=.\vorbislq\vorbislq.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "wavpack"=.\wavpack\wavpack.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

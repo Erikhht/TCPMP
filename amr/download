@@ -1,0 +1,44 @@
+#!/bin/sh
+
+PATCH="patch -p0"
+WGET="wget"
+TMPDIR="/tmp/tcpmp"
+SRCDIR="`pwd`"
+
+mkdir -p "$TMPDIR"; cd "$TMPDIR"
+
+#-------------
+# 1. download
+#-------------
+
+if test ! -f "26104-610.zip" ; then
+  $WGET http://www.3gpp.org/ftp/Specs/archive/26_series/26.104/26104-610.zip || { echo "error downloading 26104-610.zip"; exit; }
+fi
+
+if test ! -f "26204-600.zip" ; then
+  $WGET http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-600.zip || { echo "error downloading 26204-600.zip"; exit; }
+fi
+
+#------------------------
+# 2. unpack and patching
+#------------------------
+
+unzip "26104-610.zip"
+unzip "26104-610_ANSI_C_source_code.zip"
+mkdir -p "$SRCDIR/26104"
+mv c-code/* $SRCDIR/26104
+
+unzip "26204-600.zip"
+unzip "26204-600_ANSI-C_source_code.zip"
+mkdir -p "$SRCDIR/26204"
+mv c-code/* $SRCDIR/26204
+
+cd "$SRCDIR"
+
+dos2unix 26104/interf_dec.c 26104/interf_rom.h 26104/typedef.h
+dos2unix 26204/dec_if.c 26204/if_rom.c 26204/typedef.h
+
+cat "26104.diff" | dos2unix | $PATCH || { echo "error patching 26104"; exit; }
+cat "26204.diff" | dos2unix | $PATCH || { echo "error patching 26204"; exit; }
+
+rm -Rf "$TMPDIR"

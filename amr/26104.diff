@@ -1,0 +1,122 @@
+diff -urN 26104.orig/interf_dec.c 26104/interf_dec.c
+--- 26104.orig/interf_dec.c	2004-03-04 23:00:02.000000000 +0100
++++ 26104/interf_dec.c	2005-05-03 18:48:13.654155300 +0200
+@@ -197,7 +197,7 @@
+ {
+    enum Mode mode;
+    Word32 j;
+-   Word16 *mask;
++   const Word16 *mask;
+ 
+ 
+    memset( param, 0, PRMNO_MR122 <<1 );
+@@ -383,7 +383,7 @@
+ {
+    enum Mode mode;
+    Word32 j;
+-   Word16 *mask;
++   const Word16 *mask;
+ 
+ 
+    memset( param, 0, PRMNO_MR122 <<1 );
+diff -urN 26104.orig/interf_rom.h 26104/interf_rom.h
+--- 26104.orig/interf_rom.h	2004-03-04 23:00:02.000000000 +0100
++++ 26104/interf_rom.h	2005-05-03 18:47:41.091655300 +0200
+@@ -63,7 +63,7 @@
+ #endif
+ 
+ /* Subjective importance of the speech encoded bits */
+-static Word16 order_MR475[] =
++static const Word16 order_MR475[] =
+ {
+    0, 0x80,
+    0, 0x40,
+@@ -161,7 +161,7 @@
+    11, 0x40,
+    15, 0x40
+ };
+-static Word16 order_MR515[] =
++static const Word16 order_MR515[] =
+ {
+    0, 0x1,
+    0, 0x2,
+@@ -267,7 +267,7 @@
+    12, 0x8,
+    16, 0x8
+ };
+-static Word16 order_MR59[] =
++static const Word16 order_MR59[] =
+ {
+    0, 0x80,
+    0, 0x40,
+@@ -388,7 +388,7 @@
+    12, 0x20,
+    16, 0x20
+ };
+-static Word16 order_MR67[] =
++static const Word16 order_MR67[] =
+ {
+    0, 0x80,
+    0, 0x40,
+@@ -525,7 +525,7 @@
+    12, 0x100,
+    16, 0x100
+ };
+-static Word16 order_MR74[] =
++static const Word16 order_MR74[] =
+ {
+    0, 0x80,
+    0, 0x40,
+@@ -676,7 +676,7 @@
+    12, 0x40,
+    16, 0x40
+ };
+-static Word16 order_MR795[] =
++static const Word16 order_MR795[] =
+ {
+    0, 0x1,
+    0, 0x2,
+@@ -997,7 +997,7 @@
+    14, 0x200,
+    19, 0x200
+ };
+-static Word16 order_MR102[] =
++static const Word16 order_MR102[] =
+ {
+    0, 0x1,
+    0, 0x2,
+@@ -1204,7 +1204,7 @@
+    9, 0x4,
+    9, 0x2
+ };
+-static Word16 order_MR122[] =
++static const Word16 order_MR122[] =
+ {
+    0, 0x40,
+    0, 0x20,
+@@ -1451,7 +1451,7 @@
+    18, 0x1,
+    44, 0x1
+ };
+-static Word16 order_MRDTX[] =
++static const Word16 order_MRDTX[] =
+ {
+    0, 0x4,
+    0, 0x2,
+diff -urN 26104.orig/typedef.h 26104/typedef.h
+--- 26104.orig/typedef.h	2004-03-04 23:00:02.000000000 +0100
++++ 26104/typedef.h	2005-05-03 18:43:32.732280300 +0200
+@@ -19,4 +19,13 @@
+ typedef float Float32;
+ typedef double Float64;
+ 
++#include <stdio.h>
++#define fprintf fprintf_
++#undef stderr
++#define stderr NULL
++#ifdef _MSC_VER
++#define inline __inline
++#endif
++static inline void fprintf(void* f,const char* s,...) {}
++
+ #endif

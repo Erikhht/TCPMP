@@ -1,0 +1,22 @@
+-D CONFIG_H264_DECODER 
+-D TCPMP 
+-D ARCH_ARMV4L 
+-D ARM
+-D NDEBUG 
+-D FFMPEG_EXPORTS
+-D UNICODE
+-D _WIN32
+-D _WIN32_WCE
+-D __cdecl=
+-O3 
+-fomit-frame-pointer
+-w 
+-mno-apcs-frame
+-mtune=xscale 
+-march=armv4 
+-fno-leading-underscore 
+-fsigned-char 
+-I. 
+-Ilibavutil
+-I/usr/include 
+-I/usr/include/w32api

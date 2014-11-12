@@ -1,0 +1,36 @@
+Windows Mobile ActiveSync
+------------------------- 
+
+If you are using ActiveSync and the mobile device is connected to the PC
+run the exe file from "Windows Mobile ActiveSync" directory on the PC.
+
+Windows Mobile CAB
+------------------------- 
+
+Another method to install the plugin is to copy the proper CAB file
+onto the device and run it there.
+
+Some older devices need the CAB file from the "Other" subdirectory:
+
+*.ARM720.CAB
+  different ARM CPU identifier for Sigmarion III
+  (this is NOT for Pocket Loox 720, please use PocketPC CAB for that device)
+
+*.MIPS.CAB
+  devices with MIPS CPU
+
+*.SH3.CAB
+  devices with SH3 CPU
+
+
+Palm OS
+-------
+
+Use HotSync to install the plugin prc file
+
+
+Windows Desktop
+---------------
+
+Manually copy the plg file to the players directory
+

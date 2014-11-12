@@ -1,0 +1,25 @@
+MAD: MPEG Audio Decoder 0.15.1b
+http://www.underbit.com/products/mad/
+
+defines:
+FPM_DEFAULT (non ARM GCC)
+FPM_ARM (ARM GCC)
+OPT_SPEED
+ASO_INTERLEAVE1 (non MIPS)
+ASO_INTERLEAVE2 (MIPS)
+ASO_ZEROCHECK   (MIPS)
+inline=__inline (MSVC)
+BUILDFIXED (WIN32,WINCE)
+
+libmad:
+minimad.c not needed
+decoder.c not needed
+decoder.h not needed
+version.c not needed
+version.h not needed
+timer.c not needed
+timer.h not needed
+global.h abort() -> exit(1)
+frame.c comment out "mad_timer_set" and "mad_timer_zero"
+layer3.c rq_table.dat eliminated and fixedfloat with long exponent (evc vs gcc compability)
+huffman.c renamed to huffmanmad.c

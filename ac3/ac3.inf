@@ -1,0 +1,85 @@
+[Version]
+Signature = "$Windows NT$"
+Provider = "TCPMP"
+CESignature = "$Windows CE$"
+
+[CEStrings]
+AppName = "AC3 plugin"
+InstallDir = %CE1%\TCPMP
+
+[Strings]
+reg_plugins = Software\TCPMP.Plugins
+Plugin = ac3
+
+;==================================================
+
+[CEDevice.SH3] 
+ProcessorType = 10003
+VersionMin              = 2.0
+VersionMax              = 100.0
+
+[CEDevice.MIPS] 
+ProcessorType = 4000
+VersionMin              = 2.0
+VersionMax              = 100.0
+
+[CEDevice.ARM] 
+ProcessorType = 2577
+VersionMin              = 2.0
+VersionMax              = 100.0
+BuildMax                = 0xE0000000
+UnsupportedPlatforms = "Smartphone"
+
+[CEDevice.ARM720] 
+ProcessorType = 1824
+VersionMin              = 2.0
+VersionMax              = 100.0
+BuildMax                = 0xE0000000
+UnsupportedPlatforms = "Smartphone"
+
+[CEDevice.ARM_SP] 
+ProcessorType = 2577
+VersionMin              = 3.0
+VersionMax              = 100.0
+BuildMax                = 0xE0000000
+UnsupportedPlatforms = "Jupiter","HPC","HPC Pro","Pocket PC","Palm PC2","Palm PC"
+
+;==================================================
+
+[DefaultInstall]
+CopyFiles=Files.Common
+Addreg = RegSettings.All
+
+;==================================================
+
+[SourceDisksNames]
+1 =, "All Files",,.
+
+[SourceDisksNames.SH3]
+2 = ,"SH3 files",,sh3rel
+ 
+[SourceDisksNames.MIPS]
+2 = ,"MIPS files",,mipsrel
+
+[SourceDisksNames.ARM]
+2 = ,"ARM files",,armrelgcc
+
+[SourceDisksNames.ARM720]
+2 = ,"ARM files",,armrelgcc
+
+[SourceDisksNames.ARM_SP]
+2 = ,"ARM files",,armrelgcc
+
+[SourceDisksFiles]
+%Plugin%.plg = 2
+
+;==================================================
+[DestinationDirs]
+Files.Common = 0, %InstallDir% 
+DefaultDestDir = 0, %InstallDir%
+
+[Files.Common]
+%Plugin%.plg,,,0
+
+[RegSettings.All] 
+HKLM,%reg_plugins%,%AppName%,0x00000000,%InstallDir%\%Plugin%.plg

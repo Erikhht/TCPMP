@@ -1,0 +1,17 @@
+FAAD2: Freeware Advanced Audio (AAC) Decoder including SBR decoding
+http://www.audiocoding.com/
+
+using snapshot 15/09/2004
+
+defines:
+for aac: LC_ONLY_DECODER
+
+changes:
+fixed.h disable EVC4 instricts to able to use EVC3
+common.h added standard types for WIN32 GCC
+removed assert.h and math.h references (wince,palmos)
+codebook/hcb.h corrected include path
+decoder.c NeAACDecGetErrorMessage commented out
+error.c not needed 
+tried to change all global variables to const if possible
+

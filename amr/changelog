@@ -1,0 +1,12 @@
+The fixed-point version AMR-NB:
+http://www.3gpp.org/ftp/Specs/archive/26_series/26.104/26104-610.zip
+
+The fixed-point version AMR-WB:
+http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-600.zip
+
+extract c-code directory in source archvies as 26104 and 26204 subdirectories
+and run patch with 26104.diff and 26204.diff
+
+
+defines:
+inline=__inline (MSVC)

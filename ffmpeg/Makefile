@@ -1,0 +1,39 @@
+PLUGIN=ffmpeg
+DEFS= -D CONFIG_H264_DECODER -D TCPMP -D ARCH_ARMV4L -Iffmpeg/libavutil
+DEFFILE = ffmpeg/ffmpeg.def 
+SRCFILES_ARM  = ffmpeg/stdafx.c 
+SRCFILES_ARM += ffmpeg/ffmpeg.c 
+SRCFILES_ARM += ffmpeg/libavcodec/bitstream.c 
+SRCFILES_ARM += ffmpeg/libavcodec/cabac.c 
+SRCFILES_ARM += ffmpeg/libavcodec/cinepak.c 
+SRCFILES_ARM += ffmpeg/libavcodec/dsputil.c 
+SRCFILES_ARM += ffmpeg/libavcodec/error_resilience.c 
+SRCFILES_ARM += ffmpeg/libavcodec/golomb.c 
+SRCFILES_ARM += ffmpeg/libavcodec/h263.c 
+SRCFILES_ARM += ffmpeg/libavcodec/h263dec.c 
+SRCFILES_ARM += ffmpeg/libavcodec/h264.c 
+SRCFILES_ARM += ffmpeg/libavcodec/h264idct.c 
+SRCFILES_ARM += ffmpeg/libavcodec/jrevdct.c 
+SRCFILES_ARM += ffmpeg/libavcodec/mem.c 
+SRCFILES_ARM += ffmpeg/libavcodec/mpeg12.c 
+SRCFILES_ARM += ffmpeg/libavcodec/mpegvideo.c 
+SRCFILES_ARM += ffmpeg/libavcodec/msmpeg4.c 
+SRCFILES_ARM += ffmpeg/libavcodec/msvideo1.c 
+SRCFILES_ARM += ffmpeg/libavcodec/parser.c 
+SRCFILES_ARM += ffmpeg/libavcodec/simple_idct.c 
+SRCFILES_ARM += ffmpeg/libavcodec/tscc.c 
+SRCFILES_ARM += ffmpeg/libavcodec/utils.c 
+SRCFILES_ARM += ffmpeg/libavcodec/vp3dsp.c 
+SRCFILES_ARM += ffmpeg/libavcodec/armv4l/mpegvideo_arm.c
+SRCFILES_ARM += ffmpeg/libavcodec/armv4l/dsputil_arm.c
+SRCFILES_ARM += ffmpeg/libavcodec/armv4l/dsputil_arm_s.S
+SRCFILES_ARM += ffmpeg/libavcodec/armv4l/simple_idct_arm.S
+SRCFILES_ARM += ffmpeg/libavcodec/armv4l/jrevdct_arm.S
+SRCFILES_ARM += ffmpeg/libavutil/integer.c 
+SRCFILES_ARM += ffmpeg/libavutil/rational.c 
+SRCFILES_ARM += ffmpeg/libavutil/mathematics.c
+
+SPECDIR = ffmpeg/libavcodec/
+SPECFLAGS = -w
+
+include plugin.inc

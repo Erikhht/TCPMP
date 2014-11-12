@@ -1,0 +1,9 @@
+Speex
+http://www.speex.org
+
+defines:
+ARM4_ASM (ARM)
+FIXED_POINT
+inline=__inline (MSVC)
+
+add include path

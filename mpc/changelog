@@ -1,0 +1,17 @@
+Portable Musepack decoder library 1.1.1
+http://www.musepack.net
+
+defines:
+inline=__inline (MSVC)
+MPC_FIXED_POINT
+MPC_LITTLE_ENDIAN
+
+mpc_reader.c not needed
+sample.cpp not needed
+config_types.h created
+math.h assert removed
+math.h disable EVC4 instricts to able to use EVC3
+mpg_dec.c added optional SeekTable from old version 
+reader.h removed FILE stuff
+streaminfo.c eliminate global non const data
+mpc_decoder.c eliminate global non const data 

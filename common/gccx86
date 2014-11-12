@@ -1,0 +1,12 @@
+-D NDEBUG
+-D COMMON_EXPORTS
+-D UNICODE
+-D _WIN32
+-O3 
+-fomit-frame-pointer 
+-mmmx
+-Wall 
+-fsigned-char 
+-I. 
+-I/usr/include 
+-I/usr/include/w32api

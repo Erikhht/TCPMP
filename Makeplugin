@@ -1,0 +1,16 @@
+APP=tcpmp
+PLUGINS=amr aac ac3 camera ffmpeg flac matroska libmad mpc mpeg1 sonyhhe speex tta vorbislq vorbishq zodiac wavpack
+
+PLUGINS_RULES=$(PLUGINS:%=%.rule)
+
+all: $(APP) $(PLUGINS_RULES)
+
+$(APP):
+	@make -s -f sample/Makefile
+
+%.rule:
+	@make -s -f $(@:%.rule=%)/Makefile
+
+clean:
+	@make -s -f sample/Makefile clean
+	@rm -f *.prc

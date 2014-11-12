@@ -1,0 +1,605 @@
+Microsoft eMbedded Visual Tools Workspace File, Format Version 3.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "aac"=.\aac\aac.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ac3"=.\ac3\ac3.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "amr"=.\amr\amr.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "asap"=.\asap\asap.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ati3200"=.\ati3200\ati3200.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "camera"=.\camera\camera.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "common"=.\common\common.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ffmpeg"=.\ffmpeg\ffmpeg.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "flac"=.\flac\flac.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "intel2700g"=.\intel2700g\intel2700g.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "interface"=.\interface\interface.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libmad"=.\libmad\libmad.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "matroska"=.\matroska\matroska.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mpc"=.\mpc\mpc.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "mpeg1"=.\mpeg1\mpeg1.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "network"=.\network\network.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "player_ce2"=.\player\player_ce2.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lang_en
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lang_hu
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpeg1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name intel2700g
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "player_ce3"=.\player\player_ce3.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name interface
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name aac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ac3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name amr
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ati3200
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name camera
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ffmpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name intel2700g
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libmad
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name matroska
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpeg1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name network
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name speex
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name splitter
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vorbishq
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name asap
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name flac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wavpack
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "sample_ce3"=.\sample\sample_ce3.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name avi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name aac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ac3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name amr
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name camera
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ffmpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name matroska
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mp3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpeg1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name splitter
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name interface
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "setup_ce2"=.\setup\setup_ce2.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "setup_ce3"=.\setup\setup_ce3.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ac3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name avi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lang_en
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mp3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name player_ce2
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name player_ce3
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name setup_ce2
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name lang_hu
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name matroska
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpeg1
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mjpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name aac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ati3200
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name intel2700g
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mpc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name amr
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name camera
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name splitter
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ffmpeg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name interface
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vorbishq
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vorbislq
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name network
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name speex
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libmad
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name asap
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name flac
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wavpack
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "speex"=.\speex\speex.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "splitter"=.\splitter\splitter.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "template"=.\template\template.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vorbishq"=.\vorbishq\vorbishq.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vorbislq"=.\vorbislq\vorbislq.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "wavpack"=.\wavpack\wavpack.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

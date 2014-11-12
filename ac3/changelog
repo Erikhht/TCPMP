@@ -1,0 +1,13 @@
+liba52 copied from ffmpeg 0.4.8
+
+defines:
+LIBA52_FIXED
+
+changes:
+crc.c using "a52.h" instead of standard headers
+a52.h standard headers replaced
+a52_internal.h GCC ARM inline assembly added
+resample*.c not needed
+changing static global arrays to const
+bitstream.c renamed to bitstream2.c
+

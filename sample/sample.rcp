@@ -1,0 +1,524 @@
+/*****************************************************************************
+ *
+ * This program is free software ; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+ *
+ * $Id: sample.rcp 160 2005-01-03 17:06:27Z picard $
+ *
+ * The Core Pocket Media Player
+ * Copyright (c) 2004-2005 Gabor Kovacs
+ *
+ ****************************************************************************/
+
+#include "resources.h" 
+
+#define kFrmNavHeaderFlagsObjectFocusStartState 	0x00000001 
+#define	kFrmNavHeaderFlagsAppFocusStartState     	0x00000002
+
+//LAUNCHERCATEGORY ID 1000 "Multimedia"
+
+APPLICATIONICONNAME 1000 "TCPMP"
+
+BITMAPFAMILYEX ID SliderBackground
+BEGIN
+	BITMAP "slider1.bmp" BPP 1 DENSITY 1
+	BITMAP "slider2.bmp" BPP 1 DENSITY 2
+END
+
+BITMAPFAMILYEX ID SliderThumb
+BEGIN
+	BITMAP "sliderthumb1.bmp" BPP 1 TRANSPARENTINDEX 0 DENSITY 1
+	BITMAP "sliderthumb2.bmp" BPP 1 TRANSPARENTINDEX 0 DENSITY 2
+END
+
+BITMAPFAMILYEX ID OpenImageChecked
+BEGIN
+	BITMAP "openchecked1.bmp" BPP 1 TRANSPARENTINDEX 0 DENSITY 1
+	BITMAP "openchecked2.bmp" BPP 1 TRANSPARENTINDEX 0 DENSITY 2
+END
+
+BITMAPFAMILYEX ID OpenImageUnchecked
+BEGIN
+	BITMAP "openunchecked1.bmp" BPP 1 TRANSPARENTINDEX 0 DENSITY 1
+	BITMAP "openunchecked2.bmp" BPP 1 TRANSPARENTINDEX 0 DENSITY 2
+END
+
+BITMAPFAMILYEX ID OpenImageDir
+BEGIN
+	BITMAP "opendir1.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 1
+	BITMAP "opendir2.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 2
+END
+
+BITMAPFAMILYEX ID OpenImageUp
+BEGIN
+	BITMAP "openup1.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 1
+	BITMAP "openup2.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 2
+END
+
+FORM ID MainForm AT (0 0 160 160)
+MENUID MainMenu
+NOSAVEBEHIND
+BEGIN
+	GADGET				ID MainWinTitle AT ( 0 0 41 14)
+	FIELD				ID MainTitle	AT (49 2 110 11) SINGLELINE NONEDITABLE
+
+	GADGET				ID MainViewport AT (0 16 160 127)
+	SLIDER				ID MainPosition AT (1 130 128 13) MIN 0 MAX 16384 VALUE 0 PAGESIZE 16384 BACKGROUNDID SliderBackground THUMBID SliderThumb
+	FIELD				ID MainTimer	AT (129 130 30 13) SINGLELINE NONEDITABLE RIGHTALIGN
+
+	BUTTON "<<" 		ID MainPrev			AT (  1 144  26 15)
+	PUSHBUTTON "Play"	ID MainPlay			AT ( 31 144  36 15)
+	BUTTON ">>" 		ID MainNext			AT ( 71 144  26 15)
+	BUTTON "Full" 		ID MainFullScreen	AT (101 144  26 15)
+	BUTTON "Pref" 		ID MainPref			AT (131 144  26 15)
+END
+
+FORM ID AboutForm AT (4 84 152 82)
+NOSAVEBEHIND
+DEFAULTBTNID DummyOk
+BEGIN
+	TITLE "About TCPMP"
+	LABEL "The Core Pocket Media Player" AUTOID AT (20 18)
+	LABEL "                                        " AboutVersion AT (40 29)
+
+	LABEL "This program is FREE software" AUTOID AT (10 44)
+	LABEL "and may be distributed according" AUTOID AT (10 54)
+	LABEL "to the terms of the GNU General" AUTOID AT (10 64)
+	LABEL "Public License." AUTOID AT (10 74)
+
+	LABEL "                                        " AboutOSVersion AT (10 92)
+	LABEL "                                        " AboutOEMInfo AT (10 102)
+	LABEL "                                        " AboutCPU AT (10 112)
+	LABEL "                                        " AboutMem1 AT (10 122)
+	LABEL "                                        " AboutMem2 AT (10 132)
+
+	BUTTON "OK" ID DummyOk AT (59 146 40 12)
+END
+
+NAVIGATION ID AboutForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID DummyOk
+NAVIGATIONMAP
+	ROW 	DummyOk 
+END
+
+FORM ID MediaInfoForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID DummyOk
+BEGIN
+	TITLE "Media Info"
+	LABEL "                                        " MediaInfoFormat AT (10 18)
+	LABEL "                                        " MediaInfoURL AT (10 29)
+	LABEL "                                        " MediaAudioCodec AT (10 50)
+	LABEL "                                        " MediaAudioFormat AT (10 61)
+	LABEL "                                        " MediaVideoCodec AT (10 82)
+	LABEL "                                        " MediaVideoFormat AT (10 93)
+	LABEL "                                        " MediaVideoTotal AT (10 104)
+	LABEL "                                        " MediaVideoDropped AT (10 115)
+
+	BUTTON "OK" ID DummyOk AT (59 146 40 12)
+END
+
+NAVIGATION ID MediaInfoForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID DummyOk
+NAVIGATIONMAP
+	ROW 	DummyOk 
+END
+
+FORM ID BenchmarkForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID DummyOk
+BEGIN
+	TITLE "Benchmark"
+	LABEL "                                        " BenchmarkSpeed AT (10 18)
+	LABEL "                                        " BenchmarkFPS AT (10 38)
+	LABEL "                                        " BenchmarkTime AT (10 49)
+	LABEL "                                        " BenchmarkOrigFPS AT (10 69)
+	LABEL "                                        " BenchmarkOrigTime AT (10 80)
+
+	BUTTON "OK" ID DummyOk AT (59 146 40 12)
+END
+
+NAVIGATION ID BenchmarkForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID DummyOk
+NAVIGATIONMAP
+	ROW 	DummyOk 
+END
+
+FORM ID OpenForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID OpenOk
+BEGIN
+	TITLE "Select"
+
+//	POPUPTRIGGER ""		ID OpenMime		AT (80 0 80 12) LEFTANCHOR
+//	POPUPLIST			ID OpenMime OpenMimeList
+//	LIST				ID OpenMimeList AT (80 0 80 60) NONUSABLE
+
+	FIELD				ID OpenURL		AT (0 16 160 12) SINGLELINE NONEDITABLE
+	GADGET				ID OpenLine     AT (0 28 152 1)
+	GADGET				ID OpenList     AT (0 30 152 110)
+	SCROLLBAR			ID OpenScroll	AT (152 30 7 110) 
+
+	BUTTON "OK"			ID OpenOk		AT (  2 143  36 15)
+	BUTTON "All" 		ID OpenAll		AT ( 42 143  36 15)
+	BUTTON "None"		ID OpenNone		AT ( 82	143  36 15)
+	BUTTON "Cancel"		ID OpenCancel	AT (122 143  36 15)
+
+END
+
+NAVIGATION ID OpenForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID OpenOk
+NAVIGATIONMAP
+	ROW OpenOk
+		OpenAll
+		OpenNone
+		OpenCancel
+END
+
+FORM ID TweakForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID DummyOk
+BEGIN
+	TITLE "Tweaks"
+
+	CHECKBOX "Battery manager override" ID TweakBattery AT ( 1 16 157 12 )
+	LABEL "Device won't emergency turn off." ID TweakBatteryLabel1 AT (6 28)
+	LABEL "Very much reduced player interface." ID TweakBatteryLabel2 AT (6 40)
+    LABEL "Use POWER button to exit this mode!" ID TweakBatteryLabel3 AT (6 52)
+
+	CHECKBOX "Eliminate LCD tearing" ID TweakTrippleBuffer AT ( 1 67 157 12 )
+	LABEL "Only visible on 320x480 screens." ID TweakTrippleBufferLabel1 AT (6 79)
+
+	CHECKBOX "LCD white borderless fullscreen" ID TweakBorderless AT ( 1 94 157 12 )
+	LABEL "Not all LCD panels support it." ID TweakBorderlessLabel1 AT (6 106)
+	LABEL "UNCHECK IF IT DOESN'T WORK!" ID TweakBorderlessLabel2 AT (6 118)
+
+	CHECKBOX "Use storage memory for decoding" ID TweakMemory AT ( 1 133 157 12 )
+
+	BUTTON "OK" ID DummyOk AT (59 146 40 12)
+END
+
+NAVIGATION ID TweakForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID DummyOk
+NAVIGATIONMAP
+	ROW 	DummyOk 
+END
+
+FORM ID AdvForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID DummyOk
+BEGIN
+	TITLE "Advanced options"
+
+	CHECKBOX "Smooth zoom" ID AdvSmoothZoom AT ( 1 16 157 12 )
+	CHECKBOX "D-Pad follow screen orientation" ID AdvKeyFollowDir AT ( 1 28 157 12 )
+	CHECKBOX "Benchmark from current position" ID AdvBenchFromPos AT ( 1 40 157 12 )
+	CHECKBOX "Override AVI timing based on audio" ID AdvAVIFrameRate AT ( 1 52 157 12 )
+	CHECKBOX "Hide non-critical battery warnings" ID AdvNoBatteryWarning AT ( 1 64 157 12 )
+	CHECKBOX "No additional safe event checking" ID AdvNoEventChecking AT ( 1 76 157 12 )
+	CHECKBOX "Always check SD card for plugins" ID AdvCardPlugins AT ( 1 88 157 12 )
+	CHECKBOX "Pre-rotate portrait movies" ID AdvPreRotate AT ( 1 100 157 12 )
+	CHECKBOX "Disable AVC deblocking filter" ID AdvNoDeblocking AT ( 1 112 157 12 )
+	CHECKBOX "Blink LED when screen turned off" ID AdvBlinkLED AT ( 1 124 157 12 )
+
+	BUTTON "OK" ID DummyOk AT (59 146 40 12)
+END
+
+NAVIGATION ID AdvForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID DummyOk
+NAVIGATIONMAP
+	ROW 	DummyOk 
+END
+
+FORM ID EqForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID DummyOk
+BEGIN
+	TITLE "Equalizer"
+
+	LABEL      "Pre-amp"  AUTOID   AT ( 2 15)
+	SLIDER	 ID EqPreamp           AT (40 15 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID EqPreampValue      AT(142 15 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "60 Hz"    AUTOID   AT ( 2 27)
+	SLIDER	 ID Eq1                AT (40 27 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq1Value           AT(142 27 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "170 Hz"   AUTOID   AT ( 2 38)
+	SLIDER	 ID Eq2                AT (40 38 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq2Value           AT(142 38 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "310 Hz"   AUTOID   AT ( 2 49)
+	SLIDER	 ID Eq3                AT (40 49 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq3Value           AT(142 49 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "600 Hz"   AUTOID   AT ( 2 60)
+	SLIDER	 ID Eq4                AT (40 60 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq4Value           AT(142 60 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "1 Khz"    AUTOID   AT ( 2 71)
+	SLIDER	 ID Eq5                AT (40 71 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq5Value           AT(142 71 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "3 Khz"    AUTOID   AT ( 2 82)
+	SLIDER	 ID Eq6                AT (40 82 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq6Value           AT(142 82 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "6 Khz"    AUTOID   AT ( 2 93)
+	SLIDER	 ID Eq7                AT (40 93 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq7Value           AT(142 93 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "12 Khz"   AUTOID   AT ( 2 104)
+	SLIDER	 ID Eq8                AT (40 104 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq8Value           AT(142 104 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "14 Khz"   AUTOID   AT ( 2 115)
+	SLIDER	 ID Eq9                AT (40 115 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq9Value           AT(142 115 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+	LABEL      "16Khz"    AUTOID   AT ( 2 126)
+	SLIDER	 ID Eq10               AT (40 126 100 10) MIN 0 MAX 40 VALUE 20 PAGESIZE 1 FEEDBACK 
+	FIELD	 ID Eq10Value          AT(142 126 15 10) SINGLELINE NONEDITABLE RIGHTALIGN
+
+	CHECKBOX "Enabled" ID EqEnable AT ( 1 137 60 11 )
+	CHECKBOX "Attenuate" ID EqAttenuate AT ( 1 148 60 11 )
+	BUTTON "Reset" ID EqReset AT (66 146 40 12)
+	BUTTON "OK" ID DummyOk AT (118 146 40 12)
+END
+
+NAVIGATION ID EqForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID DummyOk
+NAVIGATIONMAP
+	ROW 	DummyOk 
+END
+
+FORM ID PrefForm AT (0 0 160 160)
+NOSAVEBEHIND
+DEFAULTBTNID PrefClose
+BEGIN
+	TITLE "Preferences"
+	PUSHBUTTON "General" ID PrefGeneral			AT (  1 143  46 15) GROUP 1
+	PUSHBUTTON "Video" 	 ID PrefVideo			AT ( 47 143  36 15) GROUP 1
+	PUSHBUTTON "Audio"	 ID PrefAudio			AT ( 84	143  36 15) GROUP 1
+	BUTTON     "Close" 	 ID PrefClose			AT (125 143  32 15)
+	GRAFFITISTATEINDICATOR AT (135 130)
+
+	LABEL      "Speed"   ID PrefGeneralSpeedLabel AT (6 26)
+	FIELD				ID PrefGeneralSpeedValue	AT (125 26 25 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	PUSHBUTTON "Original" ID PrefGeneralSpeedOrig AT (36 24 42 15) GROUP 2
+	PUSHBUTTON "Custom"   ID PrefGeneralSpeedCustom AT (79 24 42 15) GROUP 2
+	SLIDER				 ID PrefGeneralSpeed    AT ( 2 41 156 15) MIN 0 MAX 1024 VALUE 0 PAGESIZE 64 FEEDBACK
+
+	PUSHBUTTON "Repeat"  ID PrefGeneralRepeat   AT (35 65  40 15)
+	PUSHBUTTON "Shuffle" ID PrefGeneralShuffle  AT (85 65  40 15)
+
+	LABEL      "Move forward by"	ID PrefGeneralMoveFFwdLabel AT (6 87)
+	FIELD							ID PrefGeneralMoveFFwd AT ( 92 87 34 12 ) MAXCHARS 7 UNDERLINED 
+	LABEL      "sec."				ID PrefGeneralMoveFFwdLabel2 AT (128 87)
+	LABEL      "Move backward by"	ID PrefGeneralMoveBackLabel AT (6 100)
+	FIELD							ID PrefGeneralMoveBack AT ( 92 100 34 12 ) MAXCHARS 7 UNDERLINED
+	LABEL      "sec."				ID PrefGeneralMoveBackLabel2 AT (128 100)
+	LABEL      "A/V sync offset by"	ID PrefGeneralAVOffsetLabel AT (6 113)
+	FIELD							ID PrefGeneralAVOffset AT ( 92 113 34 12 ) MAXCHARS 7 UNDERLINED
+	LABEL      "msec."				ID PrefGeneralAVOffsetLabel2 AT (128 113)
+	
+	LABEL      "Volume"	PrefAudioVolumeLabel	AT (6 17)
+	FIELD				ID PrefAudioVolumeValue	AT (37 17 25 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	SLIDER				ID PrefAudioVolume		AT (2 28 156 15) MIN 0 MAX 100 VALUE 0 PAGESIZE 1024 FEEDBACK
+	LABEL      "Left"	PrefAudioPanLabel		AT (6 49)
+	LABEL      "Right"	PrefAudioPanLabel2		AT (88 49)
+	FIELD				ID PrefAudioPanValue	AT (37 49 25 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	SLIDER				ID PrefAudioPan			AT (2 60 110 15) MIN 0 MAX 100 VALUE 0 PAGESIZE 1 FEEDBACK
+	BUTTON	   "Reset"  ID PrefAudioPanReset AT (115 60 36 15)
+	LABEL      "Preamp" PrefAudioPreampLabel	AT (6 77)
+	FIELD				ID PrefAudioPreampValue	AT (37 77 25 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	SLIDER				ID PrefAudioPreamp		AT (2 88 110 15) MIN 0 MAX 100 VALUE 0 PAGESIZE 1 FEEDBACK
+	BUTTON	   "Reset"  ID PrefAudioPreampReset AT (115 88 36 15)
+
+	POPUPTRIGGER ""		ID PrefAudioStereo AT (3 114 80 12) LEFTANCHOR
+	POPUPLIST			ID PrefAudioStereo PrefAudioStereoList
+	LIST		"Stereo" 
+				"Stereo Swapped"
+				"Mono Join"
+				"Mono Left"
+				"Mono Right" ID PrefAudioStereoList AT (2 100 70 60) NONUSABLE
+
+	CHECKBOX   "Disable audio decoding" ID PrefAudioDisable AT ( 2 126 130 12 )
+
+	POPUPTRIGGER ""		ID PrefVideoDriver AT (2 126 90 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoDriver PrefVideoDriverList
+	LIST		ID PrefVideoDriverList AT (2 78 90 60) NONUSABLE
+
+	POPUPTRIGGER ""		ID PrefVideoAspect AT (92 126 68 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoAspect PrefVideoAspectList
+	LIST		"Auto" 
+				"Square" 
+				"4:3 Screen"
+				"4:3 NTSC" 
+				"4:3 PAL" 
+				"16:9 Screen"
+				"16:9 NTSC" 
+				"16:9 PAL" ID PrefVideoAspectList AT (91 48 68 90) NONUSABLE
+
+	CHECKBOX   "Dither colors"			ID PrefVideoDither AT ( 2 114 70 12 )
+
+	POPUPTRIGGER ""		ID PrefVideoQuality AT (81 114 80 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoQuality PrefVideoQualityList
+	LIST		"Lowest quality" 
+				"Low quality"
+				"Normal quality" ID PrefVideoQualityList AT (80 100 70 33) NONUSABLE
+
+	LABEL      "GUI."	ID PrefVideoSkinLabel	AT (45 20)
+	LABEL      "Full."	ID PrefVideoFullLabel	AT (105 20)
+	LABEL      "Zoom"	ID PrefVideoZoomLabel	AT (6 33)
+	LABEL      "Rotate"	ID PrefVideoRotateLabel	AT (6 48)
+
+	POPUPTRIGGER ""		ID PrefVideoFullZoom AT (99 33 60 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoFullZoom PrefVideoFullZoomList
+	LIST		"Fit Best" 
+				"Fill Screen" 
+				"Stretch out"
+				"Fit+10%" 
+				"Fit+20%" 
+				"Fit+30%" 
+				"50%" 
+				"100%" 
+				"150%" 
+				"200%" ID PrefVideoFullZoomList AT (99 33 56 123) NONUSABLE
+
+	POPUPTRIGGER ""		ID PrefVideoSkinZoom AT (38 33 60 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoSkinZoom PrefVideoSkinZoomList
+	LIST		"Fit Best" 
+				"Fill Screen" 
+				"Stretch out"
+				"Fit+10%" 
+				"Fit+20%" 
+				"Fit+30%" 
+				"50%" 
+				"100%" 
+				"150%" 
+				"200%" ID PrefVideoSkinZoomList AT (38 33 56 123) NONUSABLE
+
+	POPUPTRIGGER ""		ID PrefVideoFullRotate AT (99 48 56 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoFullRotate PrefVideoFullRotateList
+	LIST		"Follow GUI" 
+				"Portrait" 
+				"Landscape" 
+				"Port.Rev." 
+				"Land.Rev." ID PrefVideoFullRotateList AT (99 48 56 60) NONUSABLE
+
+	POPUPTRIGGER ""		ID PrefVideoSkinRotate AT (38 48 56 12) LEFTANCHOR
+	POPUPLIST			ID PrefVideoSkinRotate PrefVideoSkinRotateList
+	LIST		"Follow GUI" 
+				"Portrait" 
+				"Landscape" 
+				"Port.Rev." 
+				"Land.Rev." ID PrefVideoSkinRotateList AT (38 48 56 60) NONUSABLE
+
+	LABEL       "Brig"	PrefVideoBrightnessLabel	AT (1 64)
+	LABEL       "Cont"	PrefVideoContrastLabel		AT (1 80)
+	LABEL       "Sat"	PrefVideoSaturationLabel	AT (1 96)
+
+	FIELD				ID PrefVideoBrightnessValue	AT (19 64 15 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	FIELD				ID PrefVideoContrastValue	AT (19 80 15 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	FIELD				ID PrefVideoSaturationValue	AT (19 96 15 13) SINGLELINE NONEDITABLE RIGHTALIGN
+
+	SLIDER				ID PrefVideoBrightness		AT (34 64-2 46 15) MIN 0 MAX 127 VALUE 0 PAGESIZE 1 FEEDBACK
+	SLIDER				ID PrefVideoContrast		AT (34 80-2 46 15) MIN 0 MAX 127 VALUE 0 PAGESIZE 1 FEEDBACK
+	SLIDER				ID PrefVideoSaturation		AT (34 96-2 46 15) MIN 0 MAX 127 VALUE 0 PAGESIZE 1 FEEDBACK
+
+	LABEL       "Red"	PrefVideoRedLabel	AT (81 64)
+	LABEL       "Grn"	PrefVideoGreenLabel	AT (81 80)
+	LABEL       "Blue"	PrefVideoBlueLabel	AT (81 96)
+
+	FIELD				ID PrefVideoRedValue	AT (97 64 16 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	FIELD				ID PrefVideoGreenValue	AT (97 80 16 13) SINGLELINE NONEDITABLE RIGHTALIGN
+	FIELD				ID PrefVideoBlueValue	AT (97 96 16 13) SINGLELINE NONEDITABLE RIGHTALIGN
+
+	SLIDER				ID PrefVideoRed			AT (113 64-2 46 15) MIN 0 MAX 64 VALUE 0 PAGESIZE 1 FEEDBACK
+	SLIDER				ID PrefVideoGreen		AT (113 80-2 46 15) MIN 0 MAX 64 VALUE 0 PAGESIZE 1 FEEDBACK
+	SLIDER				ID PrefVideoBlue		AT (113 96-2 46 15) MIN 0 MAX 64 VALUE 0 PAGESIZE 1 FEEDBACK
+
+END
+
+NAVIGATION ID PrefForm
+	INITIALSTATE kFrmNavHeaderFlagsObjectFocusStartState
+	INITIALOBJECTID PrefClose
+	BOTTOMLEFTOBJECTID PrefGeneral
+	JUMPOBJECTID PrefGeneral
+
+NAVIGATIONMAP	
+	ROW	PrefGeneralSpeedOrig PrefGeneralSpeedCustom
+	ROW	PrefGeneralSpeed
+	ROW	PrefGeneralRepeat PrefGeneralShuffle
+	ROW	PrefGeneralMoveFFwd
+	ROW	PrefGeneralMoveBack 
+	ROW	PrefGeneralAVOffset
+	
+	ROW	PrefVideoSkinZoom PrefVideoFullZoom
+	ROW	PrefVideoSkinRotate PrefVideoFullRotate
+	ROW	PrefVideoBrightness
+	ROW	PrefVideoContrast 
+	ROW	PrefVideoSaturation 
+	ROW	PrefVideoRed
+	ROW	PrefVideoGreen
+	ROW	PrefVideoBlue
+	ROW	PrefVideoDither 
+	ROW	PrefVideoQuality
+	ROW	PrefVideoDriver
+	ROW	PrefVideoAspect
+	
+	ROW	PrefAudioVolume
+	ROW	PrefAudioPan
+	ROW	PrefAudioPanReset
+	ROW	PrefAudioPreamp
+	ROW	PrefAudioPreampReset
+	ROW	PrefAudioStereo
+	ROW	PrefAudioDisable
+
+	ROW PrefGeneral PrefVideo PrefAudio PrefClose
+END
+
+MENU ID MainMenu
+BEGIN
+	PULLDOWN "File"
+	BEGIN
+		MENUITEM "Open files" ID MainOpenFiles "O"
+		//MENUITEM "Search files" ID MainSearchFiles "S"
+		MENUITEM SEPARATOR
+		MENUITEM "Clear playlist" ID MainClear "C"
+		MENUITEM SEPARATOR
+		MENUITEM "Media Info" ID MainMediaInfo "I"
+		MENUITEM "Benchmark" ID MainBenchmark "B"
+		MENUITEM SEPARATOR
+		MENUITEM "Preferences..." ID MainMenuPref "P"
+		MENUITEM "Equalizer..." ID MainMenuEq "E"
+		MENUITEM "Advanced options..." ID MainMenuAdv "D"
+		MENUITEM "Tweaks..." ID MainMenuTweaks "T"
+		MENUITEM "About"	 ID MainAbout "A"
+	END
+END
+
+ICONFAMILYEX 
+BEGIN
+	BITMAP "icon22.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 72
+	BITMAP "icon44.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 144
+END
+
+SMALLICONFAMILYEX 
+BEGIN
+	BITMAP "icon15_9.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 72
+	BITMAP "icon30_18.bmp" BPP 8 TRANSPARENT 255 0 255 DENSITY 144
+END
+
+DATA "lang" ID 1000 "../lang/lang_std.bin"
+DATA "lang" ID 1001 "../lang/lang_en.bin"
+

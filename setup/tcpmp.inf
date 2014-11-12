@@ -1,0 +1,238 @@
+;==================================================
+; The Core Pocket Media Player CAB Wizard config
+;==================================================
+
+[Version]
+Signature = "$Windows NT$"
+Provider = "TCPMP"
+CESignature = "$Windows CE$"
+
+[CEStrings]
+AppName = "The Core Pocket Media Player"
+InstallDir = %CE1%\TCPMP
+
+;==================================================
+
+[CEDevice.SH3_CE2] 
+ProcessorType = 10003
+VersionMin              = 2.0
+VersionMax              = 2.999
+
+[CEDevice.MIPS_CE2] 
+ProcessorType = 4000
+VersionMin              = 2.0
+VersionMax              = 2.999
+
+[CEDevice.ARM_CE2] 
+ProcessorType = 2577
+VersionMin              = 2.0
+VersionMax              = 2.999
+
+[CEDevice.SH3_CE3] 
+ProcessorType = 10003
+VersionMin              = 3.0
+VersionMax              = 100.0
+
+[CEDevice.MIPS_CE3] 
+ProcessorType = 4000
+VersionMin              = 3.0
+VersionMax              = 100.0
+
+[CEDevice.ARM_CE3] 
+ProcessorType = 2577
+VersionMin              = 3.0
+VersionMax              = 100.0
+BuildMax                = 0xE0000000
+UnsupportedPlatforms = "Smartphone"
+
+[CEDevice.ARM720_CE3] 
+ProcessorType = 1824
+VersionMin              = 3.0
+VersionMax              = 100.0
+BuildMax                = 0xE0000000
+UnsupportedPlatforms = "Smartphone"
+
+[CEDevice.ARM_SP] 
+ProcessorType = 2577
+VersionMin              = 3.0
+VersionMax              = 100.0
+BuildMax                = 0xE0000000
+UnsupportedPlatforms = "Jupiter","HPC","HPC Pro","Pocket PC","Palm PC2","Palm PC"
+
+;==================================================
+
+[DefaultInstall]
+CopyFiles=Files.Common
+CEShortcuts=TCPMPShortcuts
+Addreg = RegSettings.All
+
+[DefaultInstall.SH3_CE2]
+CopyFiles=Files.SH3_CE2
+CESetupDLL=setup_ce2.dll
+
+[DefaultInstall.MIPS_CE2]
+CopyFiles=Files.MIPS_CE2
+CESetupDLL=setup_ce2.dll
+
+[DefaultInstall.ARM_CE2]
+CopyFiles=Files.ARM_CE2
+CESetupDLL=setup_ce2.dll
+
+[DefaultInstall.SH3_CE3]
+CopyFiles=Files.SH3_CE3
+CESetupDLL=setup_ce3.dll
+
+[DefaultInstall.MIPS_CE3]
+CopyFiles=Files.MIPS_CE3
+CESetupDLL=setup_ce3.dll
+
+[DefaultInstall.ARM_CE3]
+CopyFiles=Files.ARM_CE3
+CESetupDLL=setup_ce3.dll
+
+[DefaultInstall.ARM720_CE3]
+CopyFiles=Files.ARM720_CE3
+CESetupDLL=setup_ce3.dll
+
+[DefaultInstall.ARM_SP]
+CopyFiles=Files.ARM_SP
+CESetupDLL=setup_ce3.dll
+
+;==================================================
+
+[SourceDisksNames]
+1 =, "All Files",,.
+
+[SourceDisksNames.SH3_CE2]
+2 = ,"SH3 files",,sh3rel
+3 = ,"SH3 gapi",,setup\gx\sh3
+ 
+[SourceDisksNames.SH3_CE3]
+2 = ,"SH3 files",,sh3rel 
+3 = ,"SH3 gapi",,setup\gx\sh3
+
+[SourceDisksNames.MIPS_CE2]
+2 = ,"MIPS files",,mipsrel
+3 = ,"MIPS gapi",,setup\gx\mips
+
+[SourceDisksNames.MIPS_CE3]
+2 = ,"MIPS files",,mipsrel 
+3 = ,"MIPS gapi",,setup\gx\mips
+
+[SourceDisksNames.ARM_CE2]
+2 = ,"ARM files",,armrelgcc
+3 = ,"ARM gapi",,setup\gx\arm
+
+[SourceDisksNames.ARM_CE3]
+2 = ,"ARM files",,armrelgcc
+3 = ,"ARM gapi",,setup\gx\arm
+
+[SourceDisksNames.ARM720_CE3]
+2 = ,"ARM files",,armrelgcc
+3 = ,"ARM gapi",,setup\gx\arm
+
+[SourceDisksNames.ARM_SP]
+2 = ,"ARM files",,armrelgcc
+3 = ,"ARM gapi",,setup\gx\arm
+
+[SourceDisksFiles]
+ati3200.plg = 2
+splitter.plg = 2
+network.plg = 2
+common.dll = 2
+intel2700g.plg = 2
+interface.plg = 2
+mpc.plg = 2
+mpeg4.plg = 2
+msmpeg4.plg = 2
+libmad.plg = 2
+mpeg1.plg = 2
+amr.plg = 2
+camera.plg = 2
+matroska.plg = 2
+vorbishq.plg = 2
+player_ce2.exe = 2
+player_ce3.exe = 2
+setup_ce2.dll = 2
+setup_ce3.dll = 2
+gx.dll = 3
+language.tgz = 1
+copying.txt = 1
+tcpmp.htm = 1
+
+;==================================================
+[DestinationDirs]
+Files.Common = 0, %InstallDir% 
+Files.SH3_CE2 = 0, %InstallDir% 
+Files.MIPS_CE2 = 0, %InstallDir% 
+Files.ARM_CE2 = 0, %InstallDir% 
+Files.SH3_CE3 = 0, %InstallDir% 
+Files.MIPS_CE3 = 0, %InstallDir% 
+Files.ARM_CE3 = 0, %InstallDir% 
+Files.ARM720_CE3 = 0, %InstallDir% 
+Files.ARM_SP = 0, %InstallDir% 
+DefaultDestDir = 0, %InstallDir%
+TCPMPShortcuts = 0, "%CE11%"
+
+[TCPMPShortcuts]
+"TCPMP.lnk",0,"player.exe"
+
+[Files.Common]
+splitter.plg,,,0
+network.plg,,,0
+common.dll,,,0
+interface.plg,,,0
+mpc.plg,,,0
+mpeg4.plg,,,0
+libmad.plg,,,0
+mpeg1.plg,,,0
+amr.plg,,,0
+camera.plg,,,0
+matroska.plg,,,0
+vorbishq.plg,,,0
+language.tgz,,,0
+copying.txt,,,0
+tcpmp.htm,,,0
+
+[Files.SH3_CE2]
+player.exe,player_ce2.exe,,0
+setup_ce2.dll,,,0
+
+[Files.MIPS_CE2]
+player.exe,player_ce2.exe,,0
+msmpeg4.plg,,,0
+setup_ce2.dll,,,0
+
+[Files.ARM_CE2]
+player.exe,player_ce2.exe,,0
+setup_ce2.dll,,,0
+
+[Files.SH3_CE3]
+player.exe,player_ce3.exe,,0
+setup_ce3.dll,,,0
+gx.dll,,,0
+
+[Files.MIPS_CE3]
+player.exe,player_ce3.exe,,0
+msmpeg4.plg,,,0
+setup_ce3.dll,,,0
+gx.dll,,,0
+
+[Files.ARM_CE3]
+player.exe,player_ce3.exe,,0
+setup_ce3.dll,,,0
+gx.dll,,,0
+ati3200.plg,,,0
+intel2700g.plg,,,0
+
+[Files.ARM720_CE3]
+player.exe,player_ce3.exe,,0
+setup_ce3.dll,,,,0
+gx.dll,,,0
+ati3200.plg,,,0
+intel2700g.plg,,,0
+
+[Files.ARM_SP]
+player.exe,player_ce3.exe,,0
+setup_ce3.dll,,,0
+

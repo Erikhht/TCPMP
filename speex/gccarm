@@ -1,0 +1,22 @@
+-D FIXED_POINT
+-D __MINGW32__
+-D ARM4_ASM
+-D ARM
+-D NDEBUG 
+-D SPEEX_EXPORTS
+-D UNICODE
+-D _WIN32
+-D _WIN32_WCE
+-D __cdecl=
+-O3 
+-fomit-frame-pointer
+-w
+-mno-apcs-frame
+-mtune=xscale 
+-march=armv4 
+-fno-leading-underscore 
+-fsigned-char 
+-I. 
+-Ispeex/include 
+-I/usr/include 
+-I/usr/include/w32api

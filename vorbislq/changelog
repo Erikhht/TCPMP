@@ -1,0 +1,27 @@
+Tremor 
+snapshot 2004.05.27
+http://www.xiph.org/ogg/vorbis/
+
+BIG_ENDIAN=0
+BYTE_ORDER=1
+LITTLE_ENDIAN=1
+_LOW_ACCURACY_ (LQ version)
+_ARM_ASSEM_ (HQ version)
+
+removing all math.h references
+debian and doc directories not needed
+misc.h remove #include <sys/types.h>
+ivorbisfile.h not needed
+ivorbisfile_example.c not needed
+vorbisfile.c not needed
+sharebook.c sort32a -> __cdecl
+floor1.c icom -> __cdecl
+os_types.h #define _ogg_calloc  (void*)_calloc
+os_types.h stdint.h instead of sys/types.h when no predefined OS is found
+mapping0.c comment out "seq" global variable
+framing.c crc_lookup changed to const
+registry.c/.h tables changed to const and the virtual tables in other files too
+bitwise.c mask[] changed to const
+mdct.c renamed mdctvorbis.c
+floot0.c ADJUST_SQRT2[] to const
+mdct.c bitrev[] to const

@@ -1,0 +1,85 @@
+The player source should be compatbile with the original prc-tools package,
+but for optimal performance and plugin suppotr you should build a modified 
+gcc cross c compiler. You will still need the prc-tools package with it's 
+tools and m68k compiler stuff.
+
+1. preparations
+---------------
+
+comment: probably it would be easier to build the full prc-tools package in
+         the official way with target (arm-tcpmp-palmos) and the patched gcc 3.4.3
+
+first you need to have a working prc-tools 2.3 version with configured Palm OS SDK
+
+in cygwin you need to have installed: 
+binutils, gcc, make, bison, byacc, flex, perl
+
+you should set c:/cygwin/bin infront of c:\windows in path
+(example to use cygwin's sort.exe)
+
+download prc-tools-2.3, gcc-3.4.3 and binutils-2.14 and extract to /usr/src 
+(http://sourceforge.net/projects/prc-tools/)
+(http://ftp.gnu.org/gnu/gcc/)
+(ftp://sources.redhat.com/pub/binutils/releases/)
+
+2. patching (IMPORTANT!)
+------------------------
+
+use the diff patch found in this directory. these are from the
+original prc-tools-2.3 package with gcc modification (R9 not fixed and no PIC option)
+
+cd /usr/src
+cat binutils-2.14.palmos.diff | patch -p1
+cat gcc-3.4.3.palmos.diff | patch -p1
+
+3. compiling gcc
+----------------
+
+mkdir -p /usr/arm-tcpmp-palmos/arm-tcpmp-palmos
+cp -r /usr/arm-palmos /usr/arm-tcpmp-palmos
+mv /usr/arm-tcpmp-palmos/arm-palmos /usr/arm-tcpmp-palmos/arm-tcpmp-palmos
+mkdir -p /usr/arm-tcpmp-palmos/share/prc-tools
+cp -r /usr/share/prc-tools/include /usr/arm-tcpmp-palmos/share/prc-tools/
+
+export PREFIX=/usr/arm-tcpmp-palmos
+export TARGET=arm-tcpmp-palmos
+cd /usr/src
+mkdir build-binutils-palmos build-gcc-palmos
+
+cd /usr/src/build-binutils-palmos
+../binutils-2.14/configure --target=$TARGET --prefix=$PREFIX --disable-nls
+make all install
+
+cd /usr/src/build-gcc-palmos
+export PATH=$PATH:$PREFIX/bin
+../gcc-3.4.3/configure --target=$TARGET --prefix=$PREFIX --disable-nls \
+    --enable-languages=c,c++ --without-headers --with-newlib
+make all-gcc install-gcc
+
+4. configure SDK location
+-------------------------
+
+copy the Palm OS SDK path information from the original arm-palmos gcc
+
+for linux:
+cp /usr/lib/gcc-lib/arm-palmos/specs \
+   /usr/arm-tcpmp-palmos/lib/gcc/arm-tcpmp-palmos
+
+for cygwin:
+cp /lib/gcc-lib/arm-palmos/specs \
+   /usr/arm-tcpmp-palmos/lib/gcc/arm-tcpmp-palmos
+
+5. compiling libc
+-----------------
+
+additionally you will need a recompiled libc from prc-tools:
+use the preconfigured Makefile found in tcpmp's cross-compile/libc-palmos directory
+
+cp tcpmp/cross-compile/libc-palmos/Makefile /usr/src/prc-tools-2.3/libc 
+cd /usr/src/prc-tools-2.3/libc
+make all install
+
+6. final adjustments
+--------------------
+
+add /usr/arm-tcpmp-palmos/bin to the path

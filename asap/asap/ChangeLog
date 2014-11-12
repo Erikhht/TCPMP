@@ -1,0 +1,143 @@
+** 0.2.1 released on 2006-01-28
+
+2006-01-27  Piotr Fusik  <fox@scene.pl>
+* configure.ac, Makefile.in: use ./install-sh because it can create missing
+  directories
+
+* Makefile.in: avoid $^ which is not supported by PMake ("make" on *BSD)
+
+* configure.ac, win32/Makefile, win32/wasap.rc: version 0.2.1
+
+* win32/foobar2000/foo_asap.cpp, win32/foobar2000/README, win32/Makefile:
+  foobar2000 plugin now supports subsongs
+
+
+2006-01-24  Piotr Fusik  <fox@scene.pl>
+* players/tm2.asx, asap.c, asap.h, asap2wav.c, Makefile.in, win32/wasap.c,
+  win32/Makefile, win32/foobar2000/foo_asap.cpp, win32/winamp/in_asap.c,
+  xmms/libasap.c: TM2 (Theta Music Composer 2.x) input format
+
+
+2006-01-20  Piotr Fusik  <fox@scene.pl>
+* xmms/libasap.c, win32/winamp/in_asap.c: forward declarations of "static"
+  variables should use "static" and not "extern" - this fixes the GCC 4
+  compilation error
+
+
+** 0.2.0 released on 2006-01-15
+
+2006-01-15  Piotr Fusik  <fox@scene.pl>
+* asap.c: support for subsongs in RMT files
+
+* configure.ac, Makefile.in: improved XMMS plugin compilation and installation
+
+
+2006-01-14  Piotr Fusik  <fox@scene.pl>
+* asap.c: some SAPs are self-extracting and their initialization (which
+  includes decompression) takes more than 5 Atari frames which was
+  the limit (now it's 50 frames)
+
+* cmc_0500.raw, mpt_0500.raw, rmt_0390.raw, tmc_0500.raw, raw2c.pl,
+  players/cmc.asx, players/mpt.asx, players/rmt.asx, players/tmc.asx,
+  players/.cvsignore, asap.c, Makefile.in, win32/Makefile:
+  compiled 6502 routines replaced with their source code
+  (binaries will be included in source distributions);
+  added support for stereo RMT files
+
+* asap.h, win32/foobar2000/foo_asap.cpp, win32/foobar2000/README,
+  win32/foobar2000/.cvsignore, win32/Makefile: added foobar2000 plugin
+
+
+2006-01-09  Piotr Fusik  <fox@scene.pl>
+* asap.c, asap.h, asap2wav.c, win32/wasap.c, win32/winamp/in_asap.c,
+  xmms/libasap.c: simplified code by passing full filename instead of just
+  the extension to ASAP_Load()
+
+* win32/wasap.ico: transparency did not always work for the 16x16 icon
+
+* asap.c, asap.h, asap2wav.c, asap2wav.1, configure.ac, win32/wasap.c,
+  win32/wasap.rc, win32/resource.h, win32/config.h, win32/winamp/in_asap.c,
+  xmms/libasap.c: stereo and 16-bit output
+
+* win32/wasap.c: accepts a filename on the command line (you can use
+  "Open with" from Windows Explorer)
+
+* atari800/src/pokeysnd.c: some fixes in RF pokeysnd for stereo
+
+
+2006-01-04  Piotr Fusik  <fox@scene.pl>
+* xmms/libasap.c, Makefile.in: added XMMS plugin
+
+
+** 0.1.0 released on 2005-12-31
+
+2005-12-31  Piotr Fusik  <fox@scene.pl>
+* NEWS, README, asap2wav.1, win32/README, win32/winamp/README: created
+
+* configure.ac: link with "-lm" if necessary
+
+* CREDITS, INSTALL, TODO, win32/wasap.c: slight fixes
+
+* win32/Makefile: updated the "dist" target
+
+* win32/.cvsignore: ignore asap2wav.txt
+
+
+2005-12-30  Piotr Fusik  <fox@scene.pl>
+* CREDITS, INSTALL: created
+
+* atari800/src/cpu.c, atari800/src/cpu.h, atari800/src/mzpokeysnd.c,
+  atari800/src/pokey.h, atari800/src/pokeysnd.c, atari800/src/remez.c:
+  committed changes required for ASAP to the Atari800 CVS
+
+
+2005-12-28  Piotr Fusik  <fox@scene.pl>
+* rmt_0390.raw, asap.c, asap.h, asap2wav.c, Makefile.in, win32/wasap.c,
+  win32/Makefile, win32/winamp/in_asap.c: support RMT mono songs
+
+
+2005-12-27  Piotr Fusik  <fox@scene.pl>
+* ChangeLog, TODO: created
+
+* .cvsignore: ignore autoconf-generated files
+
+* win32/wasap.c, win32/wasap.rc: use radio-marks instead of check-marks,
+  this even simplifies the code
+
+* asap.c: fixed an endless loop when a file other than SAP was loaded first;
+  made initialization of poly{9,17}_lookup several times faster;
+  implemented subsongs in MPT and TMC files; removed the unused DivN* arrays;
+  ASAP_PlaySong() first clears POKEY sound registers - this helps SAPs which
+  don't do that
+
+* maketar.pl, win32/Makefile: "nmake dist" creates release archives
+
+* asap.c, asap2wav.c, win32/wasap.c, win32/winamp/in_asap.c:
+  support DMC (DoublePlay CMC) and MPD (MPT DoublePlay) formats
+
+* win32/wasap.c: added file selector filters
+
+
+2005-12-23  Piotr Fusik  <fox@scene.pl>
+* Makefile.in, config.guess, config.sub, install-sh: uploaded the latest
+  run-time config/install scripts
+
+
+2005-12-21  Piotr Fusik  <fox@scene.pl>
+* .cvsignore, win32/.cvsignore, win32/winamp/.cvsignore: specified files
+  that are not stored in CVS
+
+* win32/Makefile: added icon dependencies
+
+* win32/wasap.ico: colored the 16x16 application icon
+
+
+2005-12-20  Piotr Fusik  <fox@scene.pl>
+* COPYING, Makefile.in, asap.c, asap.h, asap2wav.c, asap_internal.h,
+  configure.ac, cmc_0500.raw, mpt_0500.raw, tmc_0500.raw, raw2c.pl,
+  win32/Makefile, win32/config.h, win32/play.ico, win32/stop.ico,
+  win32/wasap.ico, win32/resource.h, win32/wasap.c, win32/wasap.rc,
+  win32/winamp/in2.h, win32/winamp/out.h, win32/winamp/in_asap.c:
+  initial CVS checkin
+
+

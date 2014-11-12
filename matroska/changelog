@@ -1,0 +1,7 @@
+MatroskaPraser 1.47 2005/07/06 by Haali
+http://haali.cs.msu.ru/mkv/
+
+changes:
+MatroskaParser.h _WIN32_WCE -> _MSC_VER
+MatroskaParser.c <zlib.h> -> "../../common/zlib/zlib.h"
+modifed for TCPMP buffering...

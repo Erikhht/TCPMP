@@ -1,0 +1,41 @@
+PLUGIN=speex
+DEFS=-D ARM4_ASM -D FIXED_POINT -D __MINGW32__ -Ispeex/speex/include -D RELEASE
+DEFFILE = speex/speex.def
+SRCFILES_ARM  = speex/stdafx.c 
+SRCFILES_ARM += speex/speexcodec.c 
+SRCFILES_ARM += speex/speex/libspeex/bits.c
+SRCFILES_ARM += speex/speex/libspeex/cb_search.c
+SRCFILES_ARM += speex/speex/libspeex/exc_10_16_table.c
+SRCFILES_ARM += speex/speex/libspeex/exc_10_32_table.c
+SRCFILES_ARM += speex/speex/libspeex/exc_20_32_table.c
+SRCFILES_ARM += speex/speex/libspeex/exc_5_256_table.c
+SRCFILES_ARM += speex/speex/libspeex/exc_5_64_table.c
+SRCFILES_ARM += speex/speex/libspeex/exc_8_128_table.c
+SRCFILES_ARM += speex/speex/libspeex/filters.c
+SRCFILES_ARM += speex/speex/libspeex/gain_table.c
+SRCFILES_ARM += speex/speex/libspeex/gain_table_lbr.c
+SRCFILES_ARM += speex/speex/libspeex/hexc_10_32_table.c
+SRCFILES_ARM += speex/speex/libspeex/hexc_table.c
+SRCFILES_ARM += speex/speex/libspeex/high_lsp_tables.c
+SRCFILES_ARM += speex/speex/libspeex/lbr_48k_tables.c
+SRCFILES_ARM += speex/speex/libspeex/lpc.c
+SRCFILES_ARM += speex/speex/libspeex/lsp.c
+SRCFILES_ARM += speex/speex/libspeex/lsp_tables_nb.c
+SRCFILES_ARM += speex/speex/libspeex/ltp.c
+SRCFILES_ARM += speex/speex/libspeex/math_approx.c
+SRCFILES_ARM += speex/speex/libspeex/misc.c
+SRCFILES_ARM += speex/speex/libspeex/modes.c
+SRCFILES_ARM += speex/speex/libspeex/nb_celp.c
+SRCFILES_ARM += speex/speex/libspeex/quant_lsp.c
+SRCFILES_ARM += speex/speex/libspeex/sb_celp.c
+SRCFILES_ARM += speex/speex/libspeex/speex.c
+SRCFILES_ARM += speex/speex/libspeex/speex_callbacks.c
+SRCFILES_ARM += speex/speex/libspeex/speex_header.c
+SRCFILES_ARM += speex/speex/libspeex/stereo.c
+SRCFILES_ARM += speex/speex/libspeex/vbr.c
+SRCFILES_ARM += speex/speex/libspeex/vq.c
+
+SPECDIR = speex/speex/libspeex
+SPECFLAGS = -w
+
+include plugin.inc

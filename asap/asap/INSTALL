@@ -1,0 +1,145 @@
+Getting source code
+-------------------
+
+If you want to compile an official release of ASAP, get the source distribution
+("asap-*.tar.gz") and uncompress it to a directory of your choice.
+On Unix-like systems:
+tar zxf asap-*.tar.gz
+On Windows you may use 7-Zip.
+Source distributions of ASAP include the part of Atari800 emulator sources
+used by ASAP (POKEY and 6502 emulation).
+
+If you instead want to compile the latest version from the CVS, checkout
+the "asap" module of the "asap" project and the "atari800" module
+of the "atari800" project into the same directory (so it contains
+the subdirectories "asap" and "atari800" after the checkouts).
+Using a command-line CVS client:
+mkdir asap-cvs
+cd asap-cvs
+cvs -z9 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/asap co -P asap
+cvs -z9 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/atari800 co -P atari800
+You also need to install xasm (http://xasm.atari.org) to a directory on your PATH.
+
+
+Building ASAP2WAV on Unix-like systems
+--------------------------------------
+
+You need Perl, Make and a C compiler.
+
+From your shell prompt navigate to the "asap" directory (the one that
+contains "asap.c").
+
+If you got the sources from CVS, you additionally need the "autoconf"
+package and must run the following commands first:
+autoconf
+autoheader
+
+To compile and install, run the following commands:
+./configure
+make asap2wav
+make install-asap2wav
+The last command must be run with super-user priviledges.
+
+If you have no super-user priviledges or want to install the program
+in a non-standard location, you can specify the "--prefix" option
+for the "configure" script, or simply copy the compiled program
+instead of executing "make install-asap2wav".
+
+
+Building the XMMS plugin on Unix-like systems
+---------------------------------------------
+
+In addition to the above prerequisites you need a full XMMS installation.
+If you have just the XMMS binary package installed, you additionally need
+"xmms-devel". I have tested only the 1.2.10 version of XMMS.
+XMMS itself depends on Gtk+ and Glib, so you need them too.
+
+To compile, run the following commands:
+./configure
+make asap-xmms
+
+If the compilation finished successfully, you can install the plugin
+in your home directory:
+make install-user
+
+or, if you are "root", for all users:
+make install-xmms
+
+If you have other XMMS plugins that support Atari 8-bit music, make sure
+to remove them in order to avoid conflicts.
+
+
+Building ASAP2WAV *and* the XMMS plugin on Unix-like systems
+------------------------------------------------------------
+
+If you want to compile and install both the converter and the XMMS plugin
+for all users, there is a shortcut:
+./configure
+make
+make install
+
+
+Building ASAP2WAV, WASAP and the Winamp plugin on Windows
+---------------------------------------------------------
+
+You need a Microsoft C/C++ compiler, Windows Platform SDK and Perl.
+I have tested only Visual C++ 2005 Express, Platform SDK for Windows
+Server 2003 SP1 and ActivePerl 5.8.7.
+
+You need to set "Path", "INCLUDE" and "LIB" environment variables
+to point at the correct locations in VC++ and PSDK.
+"perl" should be on the "Path", too.
+
+From the command prompt navigate to the "win32" directory and run:
+nmake
+
+This will produce asap2wav.exe, wasap.exe and winamp\in_asap.dll.
+
+
+Building the foobar2000 plugin on Windows
+-----------------------------------------
+
+You need the Windows compilation prerequisites (see above)
+and foobar2000 0.8 SDK - extract it to a new directory called
+"foobar2000_SDK" under the directory that contains "asap" and "atari800".
+
+The following changes are needed to compile foobar2000_SDK\pfc
+with Visual C++ 2005 Express:
+
+--- string.h.original	Sun Feb  1 22:33:04 2004
++++ string.h	Sat Jan 14 15:01:59 2006
+@@ -2,7 +2,6 @@
+ #define _PFC_STRING_H_
+
+ #ifndef WCHAR
+-typedef unsigned short WCHAR;
+ #endif
+
+ bool is_path_separator(unsigned c);
+@@ -473,7 +472,7 @@
+ 	inline const T * operator = (const string_simple_t<T> & param) {set_string(param);return get_ptr();}
+ 	inline const T * operator += (const T * src) {add_string(src);return get_ptr();}
+
+-	inline string_simple(const string_simple_t<T> & param) {ptr = t_strdup(param);}
++	inline string_simple_t(const string_simple_t<T> & param) {ptr = t_strdup(param);}
+ 	inline void reset() {if (ptr) {mem_ops<T>::free(ptr);ptr=0;}}
+ 	inline bool is_empty() {return !ptr || !*ptr;}
+ 	inline unsigned length() {return t_strlen(get_ptr());}
+--- string.cpp.original	Thu Mar 18 15:13:40 2004
++++ string.cpp	Sat Jan 14 15:03:27 2006
+@@ -475,7 +475,7 @@
+ 	char temp[64];
+ 	if (val<0) {*(out++) = '-'; val = -val;}
+ 	else if (b_sign) {*(out++) = '+';}
+-	_i64toa((__int64)(val * pow(10,precision)),temp,10);
++	_i64toa((__int64)(val * pow(10.0,(double) precision)),temp,10);
+ 	unsigned len = strlen(temp);
+ 	if (len <= precision)
+ 	{
+
+Now from the command prompt navigate to the "win32" directory and run:
+nmake foo
+
+This will produce foobar2000\foo_asap.dll.
+
+

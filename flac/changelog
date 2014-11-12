@@ -1,0 +1,12 @@
+FLAC
+http://flac.sourceforge.net/
+
+defines:
+FLAC__INTEGER_ONLY_LIBRARY
+inline=__inline (MSVC)
+FLAC__NO_DLL (WINCE,WIN32)
+
+
+include:
+flac/src/libFLAC/include 
+flac/include

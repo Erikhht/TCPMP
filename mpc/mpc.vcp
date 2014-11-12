@@ -1,0 +1,3087 @@
+# Microsoft eMbedded Visual Tools Project File - Name="mpc" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE x86em) Dynamic-Link Library" 0x7f02
+# TARGTYPE "Win32 (WCE SH3) Dynamic-Link Library" 0x8102
+# TARGTYPE "Win32 (WCE x86) Dynamic-Link Library" 0x8302
+# TARGTYPE "Win32 (WCE ARM) Dynamic-Link Library" 0x8502
+# TARGTYPE "Win32 (WCE emulator) Dynamic-Link Library" 0xa602
+# TARGTYPE "Win32 (WCE ARMV4) Dynamic-Link Library" 0xa302
+# TARGTYPE "Win32 (WCE MIPS) Dynamic-Link Library" 0x8202
+
+CFG=mpc - Win32 (WCE MIPS) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "mpc.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "mpc.vcn" CFG="mpc - Win32 (WCE MIPS) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "mpc - Win32 (WCE MIPS) Release" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE x86em) Release" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE ARMV4) Debug" (based on "Win32 (WCE ARMV4) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE ARMV4) Release" (based on "Win32 (WCE ARMV4) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE emulator) Debug" (based on "Win32 (WCE emulator) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE emulator) Release" (based on "Win32 (WCE emulator) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "mpc - Win32 (WCE ARM) Release GCC" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSRel"
+# PROP BASE Intermediate_Dir "MIPSRel"
+# PROP BASE CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSRel"
+# PROP Intermediate_Dir "MIPSRel"
+# PROP CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "MIPS" /d "_MIPS_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "MIPS" /d "_MIPS_" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /QMR4100 /O2 /I "libmusepack/include" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D "_USRDLL" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /FAcs /YX /M$(CECrtMT) /Oxs /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /MACHINE:MIPS
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /map /nodefaultlib:"$(CENoDefaultLib)" /out:"../MIPSRel/mpc.plg" /subsystem:windowsce,2.00 /MACHINE:MIPS
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPSDbg"
+# PROP BASE Intermediate_Dir "MIPSDbg"
+# PROP BASE CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPSDbg"
+# PROP Intermediate_Dir "MIPSDbg"
+# PROP CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "MIPS" /d "_MIPS_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "MIPS" /d "_MIPS_" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /QMR4100 /Zi /O2 /I "libmusepack/include" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D "_USRDLL" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /FAcs /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /MACHINE:MIPS
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /map /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"../MIPSDbg/mpc.plg" /subsystem:windowsce,2.00 /MACHINE:MIPS
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH3Rel"
+# PROP BASE Intermediate_Dir "SH3Rel"
+# PROP BASE CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH3Rel"
+# PROP Intermediate_Dir "SH3Rel"
+# PROP CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "SHx" /d "SH3" /d "_SH3_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "SHx" /d "SH3" /d "_SH3_" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /O2 /I "libmusepack/include" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D "_USRDLL" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Oxt /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /MACHINE:SH3
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /map /nodefaultlib:"$(CENoDefaultLib)" /out:"../SH3Rel/mpc.plg" /subsystem:windowsce,2.00 /MACHINE:SH3
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH3Dbg"
+# PROP BASE Intermediate_Dir "SH3Dbg"
+# PROP BASE CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH3Dbg"
+# PROP Intermediate_Dir "SH3Dbg"
+# PROP CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "SHx" /d "SH3" /d "_SH3_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "SHx" /d "SH3" /d "_SH3_" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /Zi /Od /I "libmusepack/include" /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D "_USRDLL" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /MACHINE:SH3
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"../SH3Dbg/mpc.plg" /subsystem:windowsce,2.00 /MACHINE:SH3
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /O2 /I "libmusepack/include" /D "_USRDLL" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /FA /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /map /nodefaultlib:"$(CENoDefaultLib)" /out:"../ARMRel/mpc.plg" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /Zi /Od /I "libmusepack/include" /D "_USRDLL" /D "DEBUG" /D "ARM" /D "_ARM_" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"../ARMDbg/mpc.plg" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86EMRel"
+# PROP BASE Intermediate_Dir "X86EMRel"
+# PROP BASE CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86EMRel"
+# PROP Intermediate_Dir "X86EMRel"
+# PROP CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "i486" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "i486" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /Gz /Oxs /c
+# ADD CPP /nologo /I "libmusepack/include" /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "i486" /D "_X86_" /D "x86" /D "NDEBUG" /D "_USRDLL" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gz /Oxs /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /windowsce:emulation /MACHINE:IX86
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"../X86EMRel/mpc.plg" /windowsce:emulation /MACHINE:IX86
+# SUBTRACT LINK32 /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86EMDbg"
+# PROP BASE Intermediate_Dir "X86EMDbg"
+# PROP BASE CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86EMDbg"
+# PROP Intermediate_Dir "X86EMDbg"
+# PROP CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "i486" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "i486" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_USRDLL" /D "MPC_EXPORTS" /Yu"stdafx.h" /Gz /c
+# ADD CPP /nologo /Zi /Od /I "libmusepack/include" /D "WIN32" /D "STRICT" /D "_USRDLL" /D "DEBUG" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "i486" /D "_X86_" /D "x86" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gz /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /windowsce:emulation /MACHINE:IX86
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"../X86EMDbg/mpc.plg" /windowsce:emulation /MACHINE:IX86
+# SUBTRACT LINK32 /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86Dbg"
+# PROP BASE Intermediate_Dir "X86Dbg"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86Dbg"
+# PROP Intermediate_Dir "X86Dbg"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /YX /Gs8192 /GF /c
+# ADD CPP /nologo /Zi /Od /I "libmusepack/include" /D "DEBUG" /D "_i386_" /D "_X86_" /D "x86" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:windowsce,2.00 /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"../X86Dbg/mpc.plg" /subsystem:windowsce,2.00 /MACHINE:IX86
+# SUBTRACT LINK32 /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMV4Dbg"
+# PROP BASE Intermediate_Dir "ARMV4Dbg"
+# PROP BASE CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMV4Dbg"
+# PROP Intermediate_Dir "ARMV4Dbg"
+# PROP CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "DEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "DEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D "ARMV4" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /Zi /Od /I "libmusepack/include" /D "DEBUG" /D "ARM" /D "_ARM_" /D "ARMV4" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"../ARMV4Dbg/mpc.plg" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMV4Rel"
+# PROP BASE Intermediate_Dir "ARMV4Rel"
+# PROP BASE CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMV4Rel"
+# PROP Intermediate_Dir "ARMV4Rel"
+# PROP CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "NDEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "NDEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D "ARMV4" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /YX /O2 /M$(CECrtMT) /c
+# ADD CPP /nologo /Oxt /I "libmusepack/include" /D "ARM" /D "_ARM_" /D "ARMV4" /D "NDEBUG" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /out:"../ARMV4Rel/mpc.plg" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# SUBTRACT LINK32 /pdb:none
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "emulatorDbg"
+# PROP BASE Intermediate_Dir "emulatorDbg"
+# PROP BASE CPU_ID "{32E52003-403E-442D-BE48-DE10F8C6131D}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "emulatorDbg"
+# PROP Intermediate_Dir "emulatorDbg"
+# PROP CPU_ID "{32E52003-403E-442D-BE48-DE10F8C6131D}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /YX /Gs8192 /GF /c
+# ADD CPP /nologo /Zi /Od /I "libmusepack/include" /D "DEBUG" /D "_i386_" /D "_X86_" /D "x86" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:windowsce,2.00 /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"../emulatorDbg/mpc.plg" /subsystem:windowsce,2.00 /MACHINE:IX86
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "emulatorRel"
+# PROP BASE Intermediate_Dir "emulatorRel"
+# PROP BASE CPU_ID "{32E52003-403E-442D-BE48-DE10F8C6131D}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "emulatorRel"
+# PROP Intermediate_Dir "emulatorRel"
+# PROP CPU_ID "{32E52003-403E-442D-BE48-DE10F8C6131D}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /YX /Gs8192 /GF /O2 /c
+# ADD CPP /nologo /Oxt /I "libmusepack/include" /D "_i386_" /D "_X86_" /D "x86" /D "NDEBUG" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"../emulatorRel/mpc.plg" /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86Rel"
+# PROP BASE Intermediate_Dir "X86Rel"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86Rel"
+# PROP Intermediate_Dir "X86Rel"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /YX /Gs8192 /Oxs /GF /c
+# ADD CPP /nologo /I "libmusepack/include" /D "_i386_" /D "_X86_" /D "x86" /D "NDEBUG" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /YX /Gs8192 /Oxs /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /out:"../X86Rel/mpc.plg" /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRelease GCC"
+# PROP BASE Intermediate_Dir "ARMRelease GCC"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Ignore_Export_Lib 0
+# PROP BASE Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRelGCC"
+# PROP Intermediate_Dir "ARMRelGCC"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Sec_CertificateHash "8aeb6e720079eb0494ae9be32cb13a9e3687d913"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /O2 /D "_USRDLL" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /FA /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /O2 /I "libmusepack/include" /D "_USRDLL" /D "ARM" /D "_ARM_" /D "NDEBUG" /D "MPC_LITTLE_ENDIAN" /D inline=__inline /D "MPC_FIXED_POINT" /D "MPC_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /FA /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /map /nodefaultlib:"$(CENoDefaultLib)" /out:"../ARMRel/mpc.plg" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# SUBTRACT BASE LINK32 /pdb:none
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /map /nodefaultlib:"$(CENoDefaultLib)" /out:"../ARMRelGCC/mpc.plg" /subsystem:windowsce,2.00 /align:"4096" /MACHINE:ARM
+# SUBTRACT LINK32 /pdb:none
+
+!ENDIF 
+
+# Begin Target
+
+# Name "mpc - Win32 (WCE MIPS) Release"
+# Name "mpc - Win32 (WCE MIPS) Debug"
+# Name "mpc - Win32 (WCE SH3) Release"
+# Name "mpc - Win32 (WCE SH3) Debug"
+# Name "mpc - Win32 (WCE ARM) Release"
+# Name "mpc - Win32 (WCE ARM) Debug"
+# Name "mpc - Win32 (WCE x86em) Release"
+# Name "mpc - Win32 (WCE x86em) Debug"
+# Name "mpc - Win32 (WCE x86) Debug"
+# Name "mpc - Win32 (WCE ARMV4) Debug"
+# Name "mpc - Win32 (WCE ARMV4) Release"
+# Name "mpc - Win32 (WCE emulator) Debug"
+# Name "mpc - Win32 (WCE emulator) Release"
+# Name "mpc - Win32 (WCE x86) Release"
+# Name "mpc - Win32 (WCE ARM) Release GCC"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\mpc.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_MPC_C=\
+	"..\common\advanced.h"\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\codec.h"\
+	"..\common\color.h"\
+	"..\common\common.h"\
+	"..\common\context.h"\
+	"..\common\equalizer.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\mem.h"\
+	"..\common\multithread.h"\
+	"..\common\node.h"\
+	"..\common\nulloutput.h"\
+	"..\common\overlay.h"\
+	"..\common\platform.h"\
+	"..\common\player.h"\
+	"..\common\portab.h"\
+	"..\common\probe.h"\
+	"..\common\rawaudio.h"\
+	"..\common\str.h"\
+	"..\common\streams.h"\
+	"..\common\subtitle.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	".\mpc.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_MPC_C=\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	".\mpcdec\mpc_dec.h"\
+	".\mpcdec\mpc_math.h"\
+	".\mpcdec\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_MPC_C=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_MPC_C=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\stdafx.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_STDAF=\
+	"..\common\advanced.h"\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\codec.h"\
+	"..\common\color.h"\
+	"..\common\common.h"\
+	"..\common\context.h"\
+	"..\common\equalizer.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\mem.h"\
+	"..\common\multithread.h"\
+	"..\common\node.h"\
+	"..\common\nulloutput.h"\
+	"..\common\overlay.h"\
+	"..\common\platform.h"\
+	"..\common\player.h"\
+	"..\common\portab.h"\
+	"..\common\probe.h"\
+	"..\common\rawaudio.h"\
+	"..\common\str.h"\
+	"..\common\streams.h"\
+	"..\common\subtitle.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_STDAF=\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\stream.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\waveout.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_STDAF=\
+	"..\common\audio.h"\
+	"..\common\bitstream.h"\
+	"..\common\blit.h"\
+	"..\common\common.h"\
+	"..\common\err.h"\
+	"..\common\file.h"\
+	"..\common\flow.h"\
+	"..\common\format.h"\
+	"..\common\format_base.h"\
+	"..\common\id3tag.h"\
+	"..\common\idct.h"\
+	"..\common\node.h"\
+	"..\common\platform.h"\
+	"..\common\portab.h"\
+	"..\common\str.h"\
+	"..\common\timer.h"\
+	"..\common\tools.h"\
+	"..\common\video.h"\
+	"..\common\vlc.h"\
+	"..\common\waveout.h"\
+	".\mpc.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\common\dmo.h"\
+	"..\common\http.h"\
+	"..\common\stream.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\mpc.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\include\mpc_dec.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# End Group
+# Begin Group "libmusepack"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=.\libmusepack\src\huffsv46.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_HUFFS=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\requant.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_HUFFS=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFS=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\src\huffsv7.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_HUFFSV=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\requant.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_HUFFSV=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_HUFFSV=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\src\idtag.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_IDTAG=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\internal.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_IDTAG=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_IDTAG=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\src\mpc_decoder.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_MPC_D=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\internal.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\requant.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_MPC_D=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_MPC_D=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\src\requant.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_REQUA=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\internal.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_REQUA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_REQUA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\src\streaminfo.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_STREA=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\internal.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_STREA=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_STREA=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\libmusepack\src\synth_filter.c
+
+!IF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE SH3) Debug"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Debug"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86em) Debug"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Debug"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_SYNTH=\
+	".\libmusepack\include\musepack\config_types.h"\
+	".\libmusepack\include\musepack\decoder.h"\
+	".\libmusepack\include\musepack\huffman.h"\
+	".\libmusepack\include\musepack\internal.h"\
+	".\libmusepack\include\musepack\math.h"\
+	".\libmusepack\include\musepack\musepack.h"\
+	".\libmusepack\include\musepack\reader.h"\
+	".\libmusepack\include\musepack\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Debug"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE emulator) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	".\mnintrin.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE x86) Release"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ELSEIF  "$(CFG)" == "mpc - Win32 (WCE ARM) Release GCC"
+
+DEP_CPP_SYNTH=\
+	"..\common\portab.h"\
+	
+NODEP_CPP_SYNTH=\
+	".\libmusepack\include\config_types.h"\
+	".\libmusepack\include\mpc_dec.h"\
+	".\libmusepack\include\mpc_math.h"\
+	".\libmusepack\include\requant.h"\
+	".\libmusepack\include\stdafx.h"\
+	".\libmusepack\include\streaminfo.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# End Target
+# End Project
